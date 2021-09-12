@@ -1,0 +1,399 @@
+.catalog {
+  background: url(../img/catalog/catalog-bg.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 0 0 100px;
+  &__title {
+    text-align: center;
+    margin: 0 0 40px;
+    span {
+      display: block;
+      font-size: 22px;
+      line-height: 32px;
+    }
+  }
+
+  &-type {
+    &__btn {
+      position: relative;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      padding: 15px 20px;
+      min-height: 70px;
+      max-height: 70px;
+      min-width: 170px;
+      max-width: 170px;
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      background-color: transparent;
+      &.active {
+        background-color: $black;
+        color: #fff;
+      }
+    }
+    &__list {
+      display: flex;
+      overflow: auto;
+      padding-bottom: 80px;
+    }
+    &__item {
+      + .catalog-type__item {
+        margin-left: 30px;
+      }
+    }
+
+  }
+  
+  &__more-btn {
+    justify-content: center;
+    margin: 0 auto;
+    border: 2px solid $input-gray;
+    transition: color .2s ease-in, border .2s ease-in;
+    background: transparent;
+    padding: 15px 40px;
+    color: $input-gray;
+    &:hover {
+      border-color: $black;
+      color: $black;
+    }
+    &:hover svg {
+      stroke: $black;
+    }
+    svg {
+      width: 13px;
+      height: 8px;
+      stroke: $input-gray;
+      transition: stroke .2s ease-in;
+    }
+    .btn__text {
+      padding: 0 10px;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+  }
+
+  &__grid-btn {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    padding: 0;
+    svg {
+      width: 40px;
+      height: 40px;
+      color: $red;
+    }
+    .btn__text {
+      color: $red;
+      text-decoration-color: $red;
+      text-decoration: underline;
+      transition: text-decoration-color .2s ease-in;
+      font-size: 16px;
+      line-height: 26px;
+      margin-left: 10px;
+    }
+    &:hover .btn__text {
+      text-decoration-color: transparent;
+    }
+  } 
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 0 0 ;
+  }
+
+  &__item {
+    max-width: calc(50% - 15px);
+    margin-bottom: 30px;
+
+    &:nth-child(2n) {
+      margin-left: 30px;
+    }
+  }
+}
+
+.filter-for {
+  display: flex;
+  align-items: center;
+  margin-bottom: 45px;
+  &__text {
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  &__btn svg {
+    width: 30px;
+    height: 30px;
+  }
+  &__item + .filter-for__item {
+    margin-left: 50px;
+  }
+}
+
+.article {
+  background-color: #fff;
+  display: flex;
+  min-height: 355px;
+  height: 100%;
+  &__left {
+    position: relative;
+  padding: 30px 0;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: $article-before;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity .2s ease-in;
+    }
+    &.visible:before {
+      opacity: 1;
+    }
+  }
+  &-slider {
+      &__link {
+        display: flex;
+        justify-content: center;
+        &:hover .article-slider__crop{
+          opacity: 1;
+        }
+      }
+      &__crop {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        padding: 0;
+        background-color: $red-opacity;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        transform: translate(0 , -65%);
+        opacity: 0;
+        transition: opacity .2s ease-in;
+        
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+  }
+  &__slider {
+    &.swiper {
+      width: 270px;
+      height: 100%;
+      margin-top: 10px;
+      z-index: 3;
+    }
+    .swiper-pagination {
+      display: flex;
+      justify-content: center;
+      bottom: 10px;
+      width: 100%;
+    }
+    .swiper-pagination-bullet {
+      margin: 0 5px;
+      width: 10px;
+      height: 10px;
+      background-color: #7E7E7E;
+      &.swiper-pagination-bullet-active {
+        background-color: $black;
+      }
+    }
+  }
+  &__name {
+    font-size: 21px;
+    line-height: 26px;
+    color: #000;
+    margin: 0 0 5px;
+  }
+  &__serial {
+    font-size: 16px;
+    line-height: 26px;
+    color: $input-gray;
+    margin: 0 0 10px;
+  }
+  &__material {
+    font-family: "Montserrat-Regular", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+    margin: 0;
+  }
+
+  &-price {
+    &__old {
+      font-family: "Montserrat-Regular", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      text-decoration-line: line-through;
+      color: $old-price;
+      margin: 0;
+    }
+    &__new {
+      font-family: "Montserrat-Regular", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      margin: 0;
+      span {
+        font-family: "Montserrat-SemiBold", sans-serif;
+        font-weight: 600;
+        color: $red;
+        font-size: 26px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  &-info {
+    padding: 30px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__btn {
+      padding: 14px 62px;
+      display: flex;
+      justify-content: center;
+      margin-top: 35px;
+      width: 100%;
+    }
+  }
+}
+
+.os-content {
+ display: flex;
+}
+/* .os-scrollbar-track {
+  width: 100%;
+  height: 3px;
+  background-color: $input-gray;
+}
+.os-scrollbar-handle {
+  width: 30px !important;
+  height: 30px !important;
+  // display: block !important;
+  background-color: $black;
+  border-radius: 50%;
+} */
+
+/* .fakeScroll {
+  position: relative;
+  &__content {
+    display: flex;  
+  }
+  &__track {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    height: 3px;
+    background-color: $input-gray;
+  }
+  &__bar {
+    width: 30px;
+    height: 30px !important;
+    display: block !important;
+    background-color: $black;
+    border-radius: 50%;
+    top: -13px !important;
+  }
+} */
+/*
+os-theme-round-dark
+*/
+
+.os-theme-round-dark > .os-scrollbar {
+  padding: 0;
+}
+.os-theme-round-dark > .os-scrollbar-horizontal {
+  right: 20px;
+  height: 30px;
+}
+.os-theme-round-dark > .os-scrollbar-vertical {
+  bottom: 20px;
+  width: 20px;
+}
+.os-theme-round-dark.os-host-rtl > .os-scrollbar-horizontal {
+  left: 20px;
+  right: 0;
+}
+.os-theme-round-dark > .os-scrollbar-corner {
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+}
+.os-theme-round-dark > .os-scrollbar > .os-scrollbar-track {
+  background: transparent;
+}
+.os-theme-round-dark > .os-scrollbar-horizontal > .os-scrollbar-track:before,
+.os-theme-round-dark > .os-scrollbar-vertical > .os-scrollbar-track:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.15);
+}
+.os-theme-round-dark > .os-scrollbar-horizontal > .os-scrollbar-track:before {
+  left: 3px;
+  right: 3px;
+  height: 2px;
+  top: 50%;
+  margin-top: -1px;
+}
+.os-theme-round-dark > .os-scrollbar-vertical > .os-scrollbar-track:before {
+  top: 3px;
+  bottom: 3px;
+  width: 2px;
+  left: 50%;
+  margin-left: -1px;
+}
+.os-theme-round-dark > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
+  background: transparent;
+}
+.os-theme-round-dark > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: #000;
+  border-radius: 100%;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  transform: scale(1);
+}
+.os-theme-round-dark > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle{
+  transform: scale(1.3);
+}
+/* .os-scrollbar-handle {
+  top: -5px;
+} */
+.os-theme-dark > .os-scrollbar:hover > .os-scrollbar-track > .os-scrollbar-handle,
+.os-theme-dark > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
+  background-color: $black;
+  border-radius: 50%;
+}
+.os-theme-round-dark > .os-scrollbar-horizontal > .os-scrollbar-track > .os-scrollbar-handle {
+  height: 100%;
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 30px;
+}
+.os-theme-round-dark > .os-scrollbar-vertical > .os-scrollbar-track > .os-scrollbar-handle {
+  width: 100%;
+  min-height: 20px;
+  max-height: 20px;
+}
+.os-theme-round-dark.os-host-transition > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle:before {
+  transition: transform 0.3s;
+}

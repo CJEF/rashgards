@@ -1,0 +1,11 @@
+.partners {
+    &__bg {
+        position: absolute;
+        width: 0;
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

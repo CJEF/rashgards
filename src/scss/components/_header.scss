@@ -1,0 +1,96 @@
+.header {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 15px;
+    &__logo {
+        margin-right: 25px;
+        svg {
+           width: 170px;
+           height: 30px;
+       }
+    }
+    &-left {
+        display: flex;
+        align-items: center;
+        &__text {
+            font-size: 16px;
+            line-height: 16px;
+            color: #fff;
+            max-width: 156px;
+            span {
+                text-transform: uppercase;
+                color: $red;
+            }
+        };
+    }
+    &-right {
+        display: flex;
+        align-items: center;
+        &__text {
+            font-size: 16px;
+            line-height: 16px;
+            color: #fff;
+            max-width: 181px;
+            margin-right: 40px;
+        }
+    }
+
+    &-socials {
+        &__list {
+            display: flex;
+            align-items: center;
+        }
+        &__item + &__item {
+            margin-left: 10px;
+        }
+        &__link {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            border-radius: 50%;
+            transition: background-color .2s ease-in;
+            &:hover {
+                background-color: $red;
+                svg {
+                    fill: #fff;
+                }
+            }
+            svg {
+                fill: red;
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    &-info {
+        margin-left: 57px;
+        &__number {
+            display: block;
+            margin-bottom: 5px;
+            font-family: "Montserrat-Bold", sans-serif;
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 16px;
+            color: #fff;
+            transition: color .2s ease-in;
+            &:hover {
+                color: $red;
+            }
+        }
+        &__time {
+            font-family: "Montserrat-Regular", sans-serif;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 16px;
+            color: #fff;
+        }
+    }
+}
