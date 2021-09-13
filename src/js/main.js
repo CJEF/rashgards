@@ -13,7 +13,31 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-Fancybox.bind('[data-fancybox]', {
+const swiperReviews = new Swiper(".swiper-reviews", {
+  // loop: true,
+  pagination: {
+    el: ".swiper-pagination-reviews",
+    clickable: true,
+  },
+  spaceBetween: 25,
+  // centeredSlides: true,
+  slidesPerView: 3,
+  /* simulateTouch: false,
+  preventInteractionOnTransition: true,
+  mousewheelControl: false,
+  onlyExternal: false,
+  roundLengths: false,
+  preventClicks: false,
+  noSwiping: true,
+  draggable: false,
+  allowTouchMove: false,
+  noSwiping: true,
+  noSwipingClass: "swiper-slide", */
+});
+
+swiperReviews.mousewheel.enable();
+
+Fancybox.bind("[data-fancybox]", {
   // Your options go here
 });
 
@@ -23,7 +47,7 @@ Fancybox.bind('[data-fancybox]', {
   },
 }) */
 
-var instance = OverlayScrollbars(document.getElementById("content-1"), { 
+var instance = OverlayScrollbars(document.getElementById("content-1"), {
   // overflowBehavior : {
   //   x: "auto"
   // },
@@ -32,25 +56,22 @@ var instance = OverlayScrollbars(document.getElementById("content-1"), {
   // scrollbars : {
   //   visibility: "visible"
   // },
-  callbacks : {
-    onInitialized: function() {console.log(123);}
-  }
-}); 
+  
+});
 
-// OverlayScrollbars(document.getElementById("#content-1"), { resize : "both" }); 
+// OverlayScrollbars(document.getElementById("#content-1"), { resize : "both" });
 
-
-let articleLink = document.querySelectorAll(".article-slider__link")
-articleLink.forEach(function(link) {
+let articleLink = document.querySelectorAll(".article-slider__link");
+articleLink.forEach(function (link) {
   link.addEventListener("mouseover", function () {
-    let wrapper = link.closest(".article__left")
-    wrapper.classList.add('visible')
-  })
+    let wrapper = link.closest(".article__left");
+    wrapper.classList.add("visible");
+  });
   link.addEventListener("mouseout", function () {
-    let wrapper = link.closest(".article__left")
-    wrapper.classList.remove('visible')
-  })
-})
+    let wrapper = link.closest(".article__left");
+    wrapper.classList.remove("visible");
+  });
+});
 
 // setTimeout(function name(params) {
 //   /* (function ($) {
@@ -66,3 +87,64 @@ articleLink.forEach(function(link) {
 //     jQuery('.scrollbar-inner').scrollbar();
 //   });
 // }, 2000);
+
+let SwiperTop = new Swiper(".gallery-slider--top", {
+  spaceBetween: 15,
+  centeredSlides: true,
+  speed: 6000,
+  autoplay: {
+    delay: 0,
+  },
+  loop: true,
+  slidesPerView: "6",
+  allowTouchMove: false,
+  disableOnInteraction: true,
+  // mousewheel: false,
+});
+
+let SwiperBottom = new Swiper(".gallery-slider--bottom", {
+  spaceBetween: 15,
+  centeredSlides: true,
+  speed: 6000,
+  autoplay: {
+    delay: 0,
+  },
+  loop: true,
+  slidesPerView: "6",
+  allowTouchMove: false,
+  disableOnInteraction: true,
+});
+
+const anchors = document.querySelectorAll('a[href*="#"]');
+for (let anchor of anchors) {
+  if (anchor) {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // closeMenu();
+
+      const blockID = anchor.getAttribute("href").substr(1);
+
+      document.getElementById(blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }
+}
+
+const scrollTop = document.querySelector(".scroll-top");
+const introHeight = document.querySelector("#intro").offsetHeight;
+// console.log("scrollTop", scrollTop);
+// console.log("introHeight", introHeight);
+// console.log("window.top", window.top);
+// console.log("window.scrollTop ", window.scrollTop );
+// console.log("window.scrollY", window.scrollY );
+
+document.addEventListener("scroll", function() {
+  if (window.scrollY > introHeight) {
+    scrollTop.classList.add("active");
+  } else {
+    scrollTop.classList.remove("active");
+  }
+})

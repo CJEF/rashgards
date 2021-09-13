@@ -1,9 +1,9 @@
 .catalog {
   background: url(../img/catalog/catalog-bg.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  padding: 0 0 100px;
+  padding: 120px 0 100px;
   &__title {
     text-align: center;
     margin: 0 0 40px;
@@ -163,26 +163,6 @@
         justify-content: center;
         &:hover .article-slider__crop{
           opacity: 1;
-        }
-      }
-      &__crop {
-        position: absolute;
-        width: 70px;
-        height: 70px;
-        padding: 0;
-        background-color: $red-opacity;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 50%;
-        transform: translate(0 , -65%);
-        opacity: 0;
-        transition: opacity .2s ease-in;
-        
-        svg {
-          width: 30px;
-          height: 30px;
         }
       }
   }

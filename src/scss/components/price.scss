@@ -66,29 +66,29 @@
     background-color: $black;
     position: relative;
     &::before {
-        content: '';
-        z-index: 1;
-        bottom: 0;
-        right: 0;
-        width: 110px;
-        height: 69%;
-        background-repeat: no-repeat;
-        position: absolute;
+      content: "";
+      z-index: 1;
+      bottom: 0;
+      right: 0;
+      width: 110px;
+      height: 69%;
+      background-repeat: no-repeat;
+      position: absolute;
     }
     &:nth-child(2n) {
       margin-left: 30px;
     }
     &:nth-child(1):before {
-      background-image: url("../img/price/adv-1.png");
+      background-image: url("../img/price/advantage-1.png");
     }
     &:nth-child(2):before {
-      background-image: url("../img/price/adv-2.png");
+      background-image: url("../img/price/advantage-2.png");
     }
     &:nth-child(3):before {
-      background-image: url("../img/price/adv-3.png");
+      background-image: url("../img/price/advantage-3.png");
     }
     &:nth-child(4):before {
-      background-image: url("../img/price/adv-4.png");
+      background-image: url("../img/price/advantage-4.png");
       width: 95px;
     }
   }

@@ -1,0 +1,89 @@
+.footer {
+    padding: 20px 35px;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    svg {
+      width: 170px;
+      height: 30px;
+    }
+  }
+  &-left {
+    display: flex;
+    align-items: center;
+    &__text {
+      max-width: 200px;
+      margin-left: 25px;
+      span {
+        color: $red;
+      }
+    }
+  }
+
+  &-agreement {
+    display: flex;
+    flex-direction: column;
+    &__text {
+      font-family: "Montserrat-Regular", sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+    }
+    &__btn {
+      font-family: "Montserrat-Regular", sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+      color: $red;
+      text-decoration: underline;
+    }
+  }
+}
+
+.site-developer {
+  display: flex;
+  align-items: center;
+  &__text {
+    font-size: 13px;
+    line-height: 16px;
+    font-family: "Montserrat-Regular", sans-serif;
+    font-weight: 400;
+    margin-right: 10px;
+  }
+  &__link {
+      display: block;
+      color: $red;
+      text-decoration: underline;
+  }
+}
+
+.scroll-top {
+    position: fixed;
+        bottom: 16%;
+        right: 10%;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        z-index: 999;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0px 4px 20px rgb(111 135 157 / 30%);
+        transform: rotate(
+    180deg);
+        opacity: 0;
+        transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+        svg {
+            width: 18px;
+            height: 17px;
+        }
+}
+
+.scroll-top.active {
+    transform: rotate(0);
+    opacity: 1;
+}

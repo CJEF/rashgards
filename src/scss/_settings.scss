@@ -49,6 +49,9 @@ a {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1200px;
+  &--small {
+    max-width: 1000px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -171,4 +174,34 @@ a {
       height: 40px;
       transition: fill .3s ease-in-out
   }
+}
+
+.slider {
+  &__crop {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    padding: 0;
+    background-color: $red-opacity;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translate(0 , -65%);
+    opacity: 0;
+    transition: opacity .2s ease-in;
+    
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.questions__map-text {
+  margin: 0;
+}
+.questions__map-logo {
+  padding-top: 5px;
 }

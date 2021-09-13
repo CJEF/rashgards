@@ -1,0 +1,98 @@
+.gallery {
+  background-image: url(../img/gallery/gallery-bg.png);
+  // background-size: contain;
+  background-repeat: no-repeat;
+  padding: 150px 0 150px;
+  &__title {
+    font-family: "Montserrat-Bold";
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 51px;
+    color: #fff;
+    text-align: center;
+    margin: 0 0 10px;
+  }
+  &__subtitle {
+    font-size: 22px;
+    line-height: 32px;
+    color: #fff;
+    display: block;
+    margin: 0 0 30px;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-instagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 85px;
+    margin-bottom: 7px;
+    &__link {
+      margin: 0 auto;
+    }
+    svg {
+      width: 176px;
+      height: 50px;
+      margin-left: 10px;
+    }
+    &__text {
+      font-size: 22px;
+      line-height: 32px;
+      color: #fff;
+    }
+  }
+}
+
+.gallery-slider {
+  &--top {
+    margin-bottom: 30px;
+    .swiper-slide {
+      max-width: 370px !important;
+      max-height: 270px !important;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .swiper-wrapper {
+      transition-timing-function: linear;
+    }
+  }
+}
+
+.insta-default__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: min-content;
+  &:hover {
+    .insta-default__text {
+      color: $red;
+    }
+  }
+}
+.insta-default__logo {
+  background-color: $red;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+  }
+}
+.insta-default__text {
+  color: #fff;
+  font-size: 22px;
+  line-height: 16px;
+  margin-left: 10px;
+  transition: 0.2s ease-in;
+}

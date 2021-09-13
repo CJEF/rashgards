@@ -1,55 +1,92 @@
 <section class="reviews">
-    <div class="container">
-        <h2 class="reviews__title title">Отзывы</h2>
-        <span class="reviews__subtitle text-center">У нас есть  классные отзывы от наших клиентов с разных площадок</span>
-        <ul class="reviews-tab__list list-reset">
-            <li class="reviews-tab__item">
-                <a href="#" class="reviews-tab__link">
-                    <div class="reviews-tab__logo">
-                        <svg>
-                            <use xlink:href='./img/sprite.svg#reviews-whatsapp'></use>
-                        </svg>
-                    </div>
-                    <div class="reviews-tab__text">Отзывы с Whatsapp</div>
-                </a>
-                <a href="#" class="reviews-tab__link">
-                    <div class="reviews-tab__logo">
-                        <svg>
-                            <use xlink:href='./img/sprite.svg#reviews-instagram'></use>
-                        </svg>
-                    </div>
-                    <div class="reviews-tab__text">Отзывы с Instagram</div>
-                </a>
-                <a href="#" class="reviews-tab__link">
-                    <div class="reviews-tab__logo">
-                        <svg>
-                            <use xlink:href='./img/sprite.svg#reviews-youtube'></use>
-                        </svg>
-                    </div>
-                    <div class="reviews-tab__text">Отзывы с Youtube</div>
-                </a>
+  <div class="container container--small">
+    <h2 class="reviews__title title">Отзывы</h2>
+    <span class="reviews__subtitle text-center"
+      >У нас есть классные отзывы от наших клиентов с разных площадок</span
+    >
+    <ul class="reviews-tab__list list-reset">
+      <li class="reviews-tab__item">
+        <button
+          class="filter-for__btn icon-btn icon-btn--gray btn-reset active"
+        >
+          <svg>
+            <use xlink:href="./img/sprite.svg#reviews-whatsapp"></use>
+          </svg>
+          <span class="icon-btn__text filter-for__text">Отзывы с Whatsapp</span>
+        </button>
+        <button
+          class="filter-for__btn icon-btn icon-btn--gray btn-reset active"
+        >
+          <svg>
+            <use xlink:href="./img/sprite.svg#reviews-instagram"></use>
+          </svg>
+          <span class="icon-btn__text filter-for__text">Отзывы с Instagram</span>
+        </button>
+        <button
+          class="filter-for__btn icon-btn icon-btn--gray btn-reset active"
+        >
+          <svg>
+            <use xlink:href="./img/sprite.svg#reviews-youtube"></use>
+          </svg>
+          <span class="icon-btn__text filter-for__text">Отзывы с Youtube</span>
+        </button>
+      </li>
+    </ul>
+    <div class="reviews__slider">
+      <div class="swiper swiper-reviews">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img
+              class="reviews__whatsapp-img"
+              src="./img/reviews/review-1.png"
+              alt="review"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="reviews__whatsapp-img"
+              src="./img/reviews/review-1.png"
+              alt="review"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="reviews__whatsapp-img"
+              src="./img/reviews/review-1.png"
+              alt="review"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="reviews__whatsapp-img"
+              src="./img/reviews/review-1.png"
+              alt="review"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="reviews__whatsapp-img"
+              src="./img/reviews/review-1.png"
+              alt="review"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="reviews__whatsapp-img"
+              src="./img/reviews/review-1.png"
+              alt="review"
+            />
+          </div>
 
-            </li>
-        </ul>
-        <div class="reviews__slider">
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide">
-                      <img class="reviews__whatsapp-img" src="./img/reviews/review-1.png" alt="review">
-                  </div>
-                  <div class="swiper-slide">
-                      <img class="reviews__whatsapp-img" src="./img/reviews/review-1.png" alt="review">
-                  </div>
-                  <div class="swiper-slide">
-                      <img class="reviews__whatsapp-img" src="./img/reviews/review-1.png" alt="review">
-                  </div>
-
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-            </div>    
         </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination-reviews"></div>
+         <!-- If we need navigation buttons -->
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+      </div>
     </div>
+  </div>
 </section>

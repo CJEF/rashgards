@@ -1,11 +1,166 @@
 .partners {
-    &__bg {
-        position: absolute;
-        width: 0;
+  padding: 150px 0 50px;
+
+  &__bg {
+    position: absolute;
+    width: 0;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title {
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+    margin: 0 0 30px;
+  }
+
+  &__item {
+    margin: 0 40px;
+    &:nth-child(1) svg {
+      width: 181px;
+      height: 30px;
     }
-    &__list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    &:nth-child(2) svg {
+      width: 60px;
+      height: 30px;
     }
+    &:nth-child(3) svg {
+      width: 144px;
+      height: 30px;
+    }
+    &:nth-child(4) svg {
+      width: 165px;
+      height: 30px;
+    }
+    &:nth-child(5) svg {
+      width: 96px;
+      height: 30px;
+    }
+  }
+}
+
+.fighters-video {
+  display: flex;
+  &-slider.swiper {
+    width: 470px;
+    height: 270px;
+  }
+}
+
+.fighters {
+  &:last-of-type .fighters-video {
+    flex-direction: row-reverse;
+  }
+  &:last-of-type .fighters-info {
+    padding: 20px 30px 20px 0;
+  }
+  &-info {
+    padding: 20px 0 20px 30px;
+    &__title {
+      font-size: 22px;
+      line-height: 26px;
+      margin: 0 0 20px;
+    }
+    &__name {
+      font-size: 16px;
+      line-height: 26px;
+      margin: 0 0 7px;
+    }
+    &__descr {
+      font-family: "Montserrat-Regular", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      margin: 0;
+      + .fighters-info__descr {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &-list {
+    padding: 65px 0;
+    display: flex;
+    align-items: center;
+    &__img {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 10px;
+    }
+    &__name {
+      font-size: 16px;
+      line-height: 16px;
+      margin-bottom: 10px;
+    }
+    &__insta {
+    }
+  }
+
+  &-insta {
+    display: flex;
+    align-items: center;
+    &__logo {
+      width: 30px;
+      height: 30px;
+      background-color: $red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      svg {
+        width: 15px;
+        height: 15px;
+        fill: #fff;
+      }
+    }
+    &__text {
+      font-family: "Montserrat-Regular", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 16px;
+      color: $black;
+      margin-left: 10px;
+      transition: 0.2s ease-in;
+    }
+
+    &:hover {
+      .fighters-insta__text {
+        color: $red;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 33.3%;
+  }
+
+  &-item {
+    &__btn {
+      margin-top: 10px;
+      max-width: 130px;
+      max-height: 30px;
+      font-size: 13px;
+      line-height: 18px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.video-gallery {
+  &__crop {
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+    opacity: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
