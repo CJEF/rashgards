@@ -1,5 +1,5 @@
 .footer {
-    padding: 20px 35px;
+  padding: 20px 35px;
   .container {
     display: flex;
     align-items: center;
@@ -15,6 +15,8 @@
     display: flex;
     align-items: center;
     &__text {
+      font-size: 16px;
+      line-height: 18px;
       max-width: 200px;
       margin-left: 25px;
       span {
@@ -38,7 +40,12 @@
       font-size: 13px;
       line-height: 16px;
       color: $red;
+      text-decoration-color: $red;
       text-decoration: underline;
+      transition: text-decoration-color 0.2s ease-in;
+      &:hover {
+        text-decoration-color: transparent;
+      }
     }
   }
 }
@@ -54,36 +61,40 @@
     margin-right: 10px;
   }
   &__link {
-      display: block;
-      color: $red;
-      text-decoration: underline;
+    display: block;
+    color: $red;
+    text-decoration-color: $red;
+    text-decoration: underline;
+    transition: text-decoration-color 0.2s ease-in;
+    &:hover {
+      text-decoration-color: transparent;
+    }
   }
 }
 
 .scroll-top {
-    position: fixed;
-        bottom: 16%;
-        right: 10%;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        z-index: 999;
-        align-items: center;
-        background-color: #fff;
-        box-shadow: 0px 4px 20px rgb(111 135 157 / 30%);
-        transform: rotate(
-    180deg);
-        opacity: 0;
-        transition: transform .5s ease-in-out, opacity .5s ease-in-out;
-        svg {
-            width: 18px;
-            height: 17px;
-        }
+  position: fixed;
+  bottom: 16%;
+  right: 10%;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 4px 20px rgb(111 135 157 / 30%);
+  transform: rotate(180deg);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  svg {
+    width: 18px;
+    height: 17px;
+  }
 }
 
 .scroll-top.active {
-    transform: rotate(0);
-    opacity: 1;
+  transform: rotate(0);
+  opacity: 1;
 }

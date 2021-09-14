@@ -65,6 +65,11 @@
     margin-bottom: 30px;
     background-color: $black;
     position: relative;
+    &:hover {
+      .advantages__icon {
+        background-color: $blur-hover;
+      }
+    }
     &::before {
       content: "";
       z-index: 1;
@@ -101,6 +106,7 @@
     margin-right: 30px;
     border-radius: 50%;
     background-color: $blur;
+    transition: background-color .3s ease-in;
     svg {
       width: 40px;
       height: 54px;

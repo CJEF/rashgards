@@ -1,7 +1,10 @@
 .reviews {
     padding: 50px 0 130px;
+    .container--small {
+      max-width: 930px;
+    }
   &__title {
-    font-family: "Montsserrat-Bold", sans-serif;
+    font-family: "Montserrat-Bold", sans-serif;
     font-weight: 700;
     font-size: 42px;
     line-height: 51px;
@@ -29,11 +32,24 @@
           margin-bottom: 35px;
       }
   }
+
+  &__slider {
+    position: relative;
+    .swiper-button-prev {
+      left: -85px;
+      color: #000;
+    }
+    .swiper-button-next {
+      right: -72px;
+      color: #000;
+    }
+  }
 }
 
 .swiper-reviews.swiper {
     .swiper-slide {
         width: 270px;
+        user-select: none;
     }
     .swiper-wrapper {
       padding-bottom: 50px;

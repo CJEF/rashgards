@@ -3,7 +3,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  padding: 120px 0 100px;
+  padding: 120px 0 155px;
+  position: relative;
+  .swiper-line {
+    top: -120px;
+  }
   &__title {
     text-align: center;
     margin: 0 0 40px;
@@ -54,6 +58,7 @@
     background: transparent;
     padding: 15px 40px;
     color: $input-gray;
+    stroke-width: 2px;
     &:hover {
       border-color: $black;
       color: $black;
@@ -78,7 +83,7 @@
 
   &__grid-btn {
     position: absolute;
-    top: 8px;
+    top: 6px;
     right: 0;
     padding: 0;
     svg {
@@ -165,6 +170,12 @@
           opacity: 1;
         }
       }
+      &__crop {
+        transition: .2s ease-in;
+        &:hover {
+          background-color: $red;
+        }
+      }
   }
   &__slider {
     &.swiper {
@@ -178,15 +189,6 @@
       justify-content: center;
       bottom: 10px;
       width: 100%;
-    }
-    .swiper-pagination-bullet {
-      margin: 0 5px;
-      width: 10px;
-      height: 10px;
-      background-color: #7E7E7E;
-      &.swiper-pagination-bullet-active {
-        background-color: $black;
-      }
     }
   }
   &__name {
@@ -376,4 +378,17 @@ os-theme-round-dark
 }
 .os-theme-round-dark.os-host-transition > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle:before {
   transition: transform 0.3s;
+}
+
+.swiper-line {
+  transform: rotate(3.5deg);
+  position: absolute;
+  width: 100%;
+  .swiper-slide {
+    // width: 389px;
+    // height: 55px;
+  }
+  .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
 }

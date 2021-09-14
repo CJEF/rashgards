@@ -18,7 +18,7 @@
         align-items: center;
         &__text {
             font-size: 16px;
-            line-height: 16px;
+            line-height: 18px;
             color: #fff;
             max-width: 156px;
             span {
@@ -66,6 +66,7 @@
                 fill: red;
                 width: 20px;
                 height: 20px;
+                transition: .2s ease-in;
             }
         }
     }
@@ -74,7 +75,6 @@
         margin-left: 57px;
         &__number {
             display: block;
-            margin-bottom: 5px;
             font-family: "Montserrat-Bold", sans-serif;
             font-weight: bold;
             font-size: 22px;

@@ -1,14 +1,27 @@
 .partners {
-  padding: 150px 0 50px;
+  padding: 0 0 50px;
+  position: relative;
+  // background-color: #F0F0F0;
+
+  .swiper-line {
+    top: 221px;
+  }
+
+  .container {
+    position: relative;
+  }
 
   &__bg {
     position: absolute;
-    width: 0;
+    left: -71%;
+    top: 26%;
+    z-index: -1;
   }
   &__list {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
   }
   &__title {
     font-size: 22px;
@@ -44,9 +57,16 @@
 
 .fighters-video {
   display: flex;
-  &-slider.swiper {
+  &-slider .swiper-slide {
     width: 470px;
     height: 270px;
+  }
+  &-slider.swiper {
+    width: 470px;
+    padding-bottom: 45px;
+  }
+  .swiper-pagination {
+    bottom: 20px;
   }
 }
 
@@ -82,7 +102,7 @@
   }
 
   &-list {
-    padding: 65px 0;
+    padding: 20px 0;
     display: flex;
     align-items: center;
     &__img {
@@ -94,8 +114,6 @@
       font-size: 16px;
       line-height: 16px;
       margin-bottom: 10px;
-    }
-    &__insta {
     }
   }
 
@@ -124,11 +142,15 @@
       color: $black;
       margin-left: 10px;
       transition: 0.2s ease-in;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: text-decoration-color .2s ease-in, color .2s ease-in;
     }
 
     &:hover {
       .fighters-insta__text {
         color: $red;
+        text-decoration-color: $red;
       }
     }
   }
@@ -153,14 +175,31 @@
 }
 
 .video-gallery {
+  &__link {
+    &:hover {
+      cursor: pointer;
+      .video-gallery__crop {
+        background-color: $red;
+      }
+    }
+  }
   &__crop {
+    &:hover {
+      background-color: $red;
+    }
     svg {
       width: 30px;
       height: 30px;
+      margin-left: 5px;
     }
     opacity: 1;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    transition: background-color .2s ease-in;
   }
+}
+
+.gallery__item .video-gallery__crop svg {
+  margin-left: 0;
 }

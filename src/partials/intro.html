@@ -1,72 +1,82 @@
 <section class="intro" id="intro">
+  <div class="intro-top">
     @include('../partials/header.html')
-    <div class="container intro__container">
 
-        <div class="intro__content">
-            <div class="intro__top">
-                <h1 class="intro__title">Производство <span>спортивной</span> одежды</h1>
-                <p class="intro__subtitle">рашгарды, футболки, тайсты, спортивный костюм, сумки, кепки, шорты ММА, поло</p>
-                <div class="intro__teasers">
-                    <div class="intro-teaser teaser">
-                        <div class="teaser__icon">
-                            <svg>
-                                <use xlink:href='./img/sprite.svg#teaser-1'></use>
-                            </svg>
-                        </div>
-                        <div class="teaser__right">
-                            <p class="teaser__text">Собственное производство</p>
-                        </div>
-                    </div>
-                    <div class="intro-teaser teaser">
-                        <div class="teaser__icon">
-                            <svg>
-                                <use xlink:href='./img/sprite.svg#teaser-2'></use>
-                            </svg>
-                        </div>
-                        <div class="teaser__right">
-                            <p class="teaser__text">Доставка по всей России</p>
-                        </div>
-                    </div>
+    <div class="intro__top">
+        <div class="container">
+            <h1 class="intro__title">Производство <span>спортивной</span> одежды</h1>
+            <p class="intro__subtitle">
+              рашгарды, футболки, тайсты, спортивный костюм, сумки, кепки, шорты ММА,
+              поло
+            </p>
+            <div class="intro__teasers">
+              <div class="intro-teaser teaser">
+                <div class="teaser__icon">
+                  <svg>
+                    <use xlink:href="./img/sprite.svg#teaser-1"></use>
+                  </svg>
                 </div>
-                <div class="intro__btns">
-                    <a href="#catalog" class="btn btn--red intro__btn">
-                        <span class="btn__text">Выбрать одежду</span>
-                    </a>
-                    <a href="#" class="icon-btn icon-btn--red">
-                        <svg>
-                        <use xlink:href='./img/sprite.svg#price'></use>
-                        </svg>
-                        <span class="icon-btn__text">Скачать прайс-лист</span>
-                    </a>
-                    <!-- <a href="#" class="intro__btn">
-                        <svg>
-                            <use xlink:href='./img/sprite.svg#whatsapp-btn'></use>
-                        </svg>
-                        <span class="btn__text">Запросить  прайс-лист</span>
-                    </a> -->
+                <div class="teaser__right">
+                  <p class="teaser__text">Собственное производство</p>
                 </div>
+              </div>
+              <div class="intro-teaser teaser">
+                <div class="teaser__icon">
+                  <svg>
+                    <use xlink:href="./img/sprite.svg#teaser-2"></use>
+                  </svg>
+                </div>
+                <div class="teaser__right">
+                  <p class="teaser__text">Доставка по всей России</p>
+                </div>
+              </div>
             </div>
-            <div class="intro__logo logo-rounded">
-                <svg class="logo-rounded__icon">
-                    <use xlink:href='./img/sprite.svg#logo-icon'></use>
+            <div class="intro__btns">
+              <a href="#catalog" class="btn btn--red intro__btn">
+                <span class="btn__text">Выбрать одежду</span>
+              </a>
+              <a href="#" class="icon-btn icon-btn--red">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#price"></use>
                 </svg>
-                <svg class="logo-rounded__text">
-                    <use xlink:href='./img/sprite.svg#logo-text--rounded'></use>
-                </svg>
+                <span class="icon-btn__text">Скачать прайс-лист</span>
+              </a>
+              <!-- <a href="#" class="intro__btn">
+                          <svg>
+                              <use xlink:href='./img/sprite.svg#whatsapp-btn'></use>
+                          </svg>
+                          <span class="btn__text">Запросить  прайс-лист</span>
+                      </a> -->
             </div>
-            <div class="intro__bottom intro-bottom">
-                <p class="intro-bottom__term-text">Cрок изготовления заказа занимает</p>
-                <span class="intro-bottom__term">от 14 до 30 дней </span>
-                <p class="intro-bottom__term-text">в зависимости от партии </p>
-                <p class="intro-bottom__text">Все макеты и технические характеристики прописываются в договоре как и сроки и обязанности производителя и покупателя. </p>
-                <a href="#" class="icon-btn icon-btn--red intro-bottom__certificates">
-                    <svg>
-                    <use xlink:href='./img/sprite.svg#certif'></use>
-                    </svg>
-                    <span class="icon-btn__text">У нас есть сертификаты</span>
-                </a>
-            </div>
+          </div>
         </div>
-        <img src="./img/intro/intro-human.png" alt="human">
+  </div>
+  <div class="intro__bottom">
+    <div class="container intro__container">
+        <div class="intro__logo logo-rounded">
+            <svg class="logo-rounded__icon">
+              <use xlink:href="./img/sprite.svg#logo-icon"></use>
+            </svg>
+            <svg class="logo-rounded__text">
+              <use xlink:href="./img/sprite.svg#logo-text--rounded"></use>
+            </svg>
+          </div>
+          <div class="intro-bottom">
+            <p class="intro-bottom__term-text">Cрок изготовления заказа занимает</p>
+            <span class="intro-bottom__term">от 14 до 30 дней </span>
+            <p class="intro-bottom__term-text">в зависимости от партии</p>
+            <p class="intro-bottom__text">
+              Все макеты и технические характеристики прописываются в договоре как и
+              сроки и обязанности производителя и покупателя.
+            </p>
+            <a href="#" class="icon-btn icon-btn--red intro-bottom__certificates">
+              <svg>
+                <use xlink:href="./img/sprite.svg#certif"></use>
+              </svg>
+              <span class="icon-btn__text">У нас есть сертификаты</span>
+            </a>
+          </div>
+          <img class="intro__human" src="./img/intro/intro-human.png" alt="human" />
     </div>
+  </div>
 </section>

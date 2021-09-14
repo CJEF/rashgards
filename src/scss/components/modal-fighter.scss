@@ -1,0 +1,113 @@
+.modal-fighter {
+}
+
+.fighter-info {
+  display: flex;
+  margin-bottom: 20px;
+  &__left {
+    margin-right: 30px;
+  }
+  &__item {
+    display: flex;
+    & + .fighter-info__item {
+      margin-top: 10px;
+    }
+  }
+  &__right {
+      margin: 0;
+  }
+  &__key {
+    margin-right: 5px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #afafaf;
+  }
+  &__value {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.fighter-slider {
+  width: 570px;
+  height: 295px;
+  padding-bottom: 70px;
+  .swiper-pagination {
+    bottom: 28px;
+  }
+}
+
+.more-info {
+  &__item {
+    display: flex;
+    & + .more-info__item {
+      margin-top: 10px;
+    }
+  }
+  &__key {
+    font-family: "Montserrat-Regular", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #b9b9b9;
+    margin-right: 5px;
+  }
+  &__value {
+    font-size: 16px;
+    line-height: 22px;
+    font-family: "Montserrat-Regular", sans-serif;
+    font-weight: normal;
+    margin: 0;
+  }
+}
+
+.fighter-career {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-weight: normal;
+  margin: 0 0 5px;
+  &__item {
+    font-family: "Montserrat-Regular", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    position: relative;
+    list-style: none;
+    &::before {
+        content: '•';
+        position: absolute;
+        top: -1px;
+        left: -13px;
+        width: 2px;
+        height: 2px;
+    }
+  }
+  &__list {
+      margin: 0 0 5px;
+      padding-left: 15px;
+  }
+}
+
+.fighter {
+    &-training {
+        font-family: "Montserrat-Regular", sans-serif;
+    font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        margin: 0;
+      }
+      &-prof-record {
+        margin-top: 5px;
+        font-size: 16px;
+        line-height: 22px;
+      }
+      &-socials {
+          &__item {
+              max-width: max-content;
+          }
+      }
+    &-socials__item + .fighter-socials__item {
+        margin-top: 10px;
+    }
+}

@@ -6,7 +6,6 @@
  */
 
 const swiper = new Swiper(".swiper", {
-  // loop: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -14,10 +13,13 @@ const swiper = new Swiper(".swiper", {
 });
 
 const swiperReviews = new Swiper(".swiper-reviews", {
-  // loop: true,
   pagination: {
     el: ".swiper-pagination-reviews",
     clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   spaceBetween: 25,
   // centeredSlides: true,
@@ -41,25 +43,7 @@ Fancybox.bind("[data-fancybox]", {
   // Your options go here
 });
 
-/* var myScrollbar = document.querySelector('.fakescroll').fakeScroll({
-  onChange: () => {
-    myScrollbar.DOM.bar.style.left = myScrollbar.scrollRatio * 100 + "%";
-  },
-}) */
-
-var instance = OverlayScrollbars(document.getElementById("content-1"), {
-  // overflowBehavior : {
-  //   x: "auto"
-  // },
-  // resize: "none",
-  // sizeAutoCapable : false ,
-  // scrollbars : {
-  //   visibility: "visible"
-  // },
-  
-});
-
-// OverlayScrollbars(document.getElementById("#content-1"), { resize : "both" });
+var instance = OverlayScrollbars(document.getElementById("content-1"), {});
 
 let articleLink = document.querySelectorAll(".article-slider__link");
 articleLink.forEach(function (link) {
@@ -72,21 +56,6 @@ articleLink.forEach(function (link) {
     wrapper.classList.remove("visible");
   });
 });
-
-// setTimeout(function name(params) {
-//   /* (function ($) {
-//     $(window).on("load", function () {
-//       $("#content-1").mCustomScrollbar({
-//         axis: "x", // horizontal scrollbars
-//         theme:"dark",
-//         advanced:{autoExpandHorizontalScroll:true}
-//       });
-//     });
-//   })(jQuery); */
-//   jQuery(document).ready(function(){
-//     jQuery('.scrollbar-inner').scrollbar();
-//   });
-// }, 2000);
 
 let SwiperTop = new Swiper(".gallery-slider--top", {
   spaceBetween: 15,
@@ -114,6 +83,20 @@ let SwiperBottom = new Swiper(".gallery-slider--bottom", {
   allowTouchMove: false,
   disableOnInteraction: true,
 });
+
+let SwiperLine = new Swiper(".swiper-line", {
+  spaceBetween: 40,
+  speed: 6000,
+  slidesPerView: "4",
+  loop: true,
+});
+
+let fighterSlider = new Swiper(".fighter-slider", {
+  spaceBetween: 30,
+  slidesPerView: "3",
+});
+
+
 
 const anchors = document.querySelectorAll('a[href*="#"]');
 for (let anchor of anchors) {
