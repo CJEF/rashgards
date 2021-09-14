@@ -16,12 +16,16 @@
     left: -71%;
     top: 26%;
     z-index: -1;
+    @include desktop-sm {
+      display: none;
+    }
   }
   &__list {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
+    flex-wrap: wrap;
   }
   &__title {
     font-size: 22px;
@@ -32,38 +36,70 @@
 
   &__item {
     margin: 0 40px;
+    @include desktop-sm {
+      margin: 0 25px 30px 0;
+    }
     &:nth-child(1) svg {
       width: 181px;
       height: 30px;
+      @include mobile-sm {
+        width: 109px;
+        height: 18px;
+      }
     }
     &:nth-child(2) svg {
       width: 60px;
       height: 30px;
+      @include mobile-sm {
+      width: 36px;
+      height: 18px;
+    }
     }
     &:nth-child(3) svg {
       width: 144px;
       height: 30px;
+      @include mobile-sm {
+      width: 87px;
+      height: 18px;
+    }
     }
     &:nth-child(4) svg {
       width: 165px;
       height: 30px;
+      @include mobile-sm {
+        width: 99px;
+        height: 18px;
+    }
     }
     &:nth-child(5) svg {
-      width: 96px;
+      width: 58px;
       height: 30px;
+      @include mobile-sm {
+        width: 56px;
+        height: 18px;
+    }
     }
   }
 }
 
 .fighters-video {
   display: flex;
+  @include tablet {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
   &-slider .swiper-slide {
-    width: 470px;
     height: 270px;
+    @media (max-width: 500px) {
+      height: auto;
+    }
   }
   &-slider.swiper {
     width: 470px;
     padding-bottom: 45px;
+    @media (max-width: 500px) {
+      width: 100%;
+    }
   }
   .swiper-pagination {
     bottom: 20px;
@@ -73,12 +109,21 @@
 .fighters {
   &:last-of-type .fighters-video {
     flex-direction: row-reverse;
+    @include tablet {
+      flex-direction: column;
+    }
   }
   &:last-of-type .fighters-info {
     padding: 20px 30px 20px 0;
+    @include tablet {
+      padding: 20px 0;
+    }
   }
   &-info {
     padding: 20px 0 20px 30px;
+    @include tablet {
+      padding: 20px 0;
+    }
     &__title {
       font-size: 22px;
       line-height: 26px;
@@ -104,7 +149,12 @@
   &-list {
     padding: 20px 0;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    /* @ {
+      flex-direction: column;
+    } */
     &__img {
       width: 70px;
       height: 70px;
@@ -159,6 +209,14 @@
     display: flex;
     flex-direction: column;
     width: 33.3%;
+    @include tablet {
+      align-items: center;
+      width: 50%;
+      margin-bottom: 30px;
+    }
+    @include mobile-sm {
+      width: 100%;
+    }
   }
 
   &-item {

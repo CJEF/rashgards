@@ -35,6 +35,19 @@ const swiperReviews = new Swiper(".swiper-reviews", {
   allowTouchMove: false,
   noSwiping: true,
   noSwipingClass: "swiper-slide", */
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      centeredSlides: true,
+    },
+    // when window width is >= 640px
+    /* 640: {
+      slidesPerView: 2,
+      spaceBetween: 40
+    } */
+  }
 });
 
 swiperReviews.mousewheel.enable();
@@ -69,6 +82,18 @@ let SwiperTop = new Swiper(".gallery-slider--top", {
   allowTouchMove: false,
   disableOnInteraction: true,
   // mousewheel: false,
+   breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+  }
 });
 
 let SwiperBottom = new Swiper(".gallery-slider--bottom", {
@@ -82,6 +107,18 @@ let SwiperBottom = new Swiper(".gallery-slider--bottom", {
   slidesPerView: "6",
   allowTouchMove: false,
   disableOnInteraction: true,
+   breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+  }
 });
 
 let SwiperLine = new Swiper(".swiper-line", {

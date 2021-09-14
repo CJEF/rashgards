@@ -1,14 +1,21 @@
 .footer {
-  padding: 20px 35px;
+  padding: 20px 0 35px;
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   &__logo {
     svg {
       width: 170px;
       height: 30px;
+      @media (max-width: 500px) {
+        width: 140px;
+      }
     }
   }
   &-left {
@@ -28,6 +35,9 @@
   &-agreement {
     display: flex;
     flex-direction: column;
+    @include tablet {
+      margin: 20px 0;
+    }
     &__text {
       font-family: "Montserrat-Regular", sans-serif;
       font-weight: 400;

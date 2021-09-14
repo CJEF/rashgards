@@ -7,11 +7,24 @@
     left: 50%;
     transform: translateY(-50%);
     z-index: 1;
+    @include mobile-sm {
+      padding: 20px 33px;
+      transform: translate(-50%, -12%);
+      width: 330px;
+    }
+    @include mobile-ex-sm {
+      width: 305px;
+    }
   }
   &__title {
     font-size: 32px;
     line-height: 39px;
     margin: 0 0 25px;
+    @include mobile-sm {
+      font-size: 28px;
+      line-height: 34px;
+      margin-bottom: 20px;
+    }
   }
   &__number {
     display: block;
@@ -23,6 +36,10 @@
     transition: color 0.2s ease-in;
     margin: 0 0 5px;
     color: $black;
+    @include mobile-sm {
+      font-size: 20px;
+    line-height: 16px;
+    }
     &:hover {
       color: $red;
     }
@@ -98,9 +115,15 @@
 #map {
     position: relative;
     width: 100%; 
-    height: 420px;
+    height: 420px !important;
+    @include mobile-sm {
+      height: 500px !important;
+    }
 }
 
 .ymaps-2-1-79-map {
     height: 420px !important;
+    @include mobile-sm {
+      height: 500px !important;
+    }
 }

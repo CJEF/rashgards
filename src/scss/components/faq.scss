@@ -1,5 +1,8 @@
 .faq {
   margin-top: 160px;
+  @include mobile-sm {
+    margin-top: 60px;
+  }
   &__title {
     font-size: 22px;
     line-height: 32px;
@@ -19,14 +22,24 @@
     justify-content: center;
     max-width: 570px;
     margin: 0 auto;
+    @include mobile-sm {
+      flex-direction: column;
+    }
   }
   &__input {
     max-width: 270px;
+    @include mobile-sm {
+      padding: 21px 42px;
+    }
   }
   &__btn {
     margin-left: 30px;
     width: 270px;
     display: flex;
     justify-content: center;
+    @include mobile-sm {
+      margin-top: 20px;
+      margin-left: 0;
+    }
   }
 }

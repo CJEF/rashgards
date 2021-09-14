@@ -1,8 +1,11 @@
 .reviews {
-    padding: 50px 0 130px;
-    .container--small {
-      max-width: 930px;
-    }
+  padding: 50px 0 130px;
+  @include mobile-sm {
+    padding: 10px 0 50px;
+  }
+  .container--small {
+    max-width: 930px;
+  }
   &__title {
     font-family: "Montserrat-Bold", sans-serif;
     font-weight: 700;
@@ -10,6 +13,11 @@
     line-height: 51px;
     margin: 0 0 10px;
     text-align: center;
+    @include mobile-sm {
+      font-size: 36px;
+      line-height: 44px;
+      margin-bottom: 15px;
+    }
   }
   &__subtitle {
     font-size: 22px;
@@ -17,20 +25,28 @@
     text-align: center;
     display: block;
     margin: 0 auto 40px;
+    @include mobile-sm {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 35px;
+    }
   }
 
   &-tab {
-      &__item {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          button {
-            margin: 0 25px;
-          }
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      button {
+        margin: 0 25px;
+        @include mobile-ex-sm {
+          margin: 0 15px;
+        }
       }
-      &__list {
-          margin-bottom: 35px;
-      }
+    }
+    &__list {
+      margin-bottom: 35px;
+    }
   }
 
   &__slider {
@@ -38,34 +54,52 @@
     .swiper-button-prev {
       left: -85px;
       color: #000;
+      @include mobile-sm {
+        left: 25px;
+      }
+      @media (max-width: 430px) {
+        left: -15px;
+        transform: scale(0.8);
+      }
     }
     .swiper-button-next {
       right: -72px;
       color: #000;
+      @include mobile-sm {
+        right: 25px;
+      }
+      @media (max-width: 430px) {
+        right: -15px;
+        transform: scale(0.8);
+      }
     }
   }
 }
 
 .swiper-reviews.swiper {
-    .swiper-slide {
-        width: 270px;
-        user-select: none;
-    }
-    .swiper-wrapper {
-      padding-bottom: 50px;
-    }
-    .swiper-pagination-reviews {
-      bottom: 10px;
-      width: 100%;
+  .swiper-slide {
+    width: 270px;
+    user-select: none;
+    @include mobile-sm {
       display: flex;
       justify-content: center;
     }
-    .swiper-pagination-bullet {
-      // bottom: 10px;
-      margin: 0 5px;
-      background-color: #7e7e7e;
-      &.swiper-pagination-bullet-active {
-        background-color: $black;
-      }
+  }
+  .swiper-wrapper {
+    padding-bottom: 50px;
+  }
+  .swiper-pagination-reviews {
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .swiper-pagination-bullet {
+    // bottom: 10px;
+    margin: 0 5px;
+    background-color: #7e7e7e;
+    &.swiper-pagination-bullet-active {
+      background-color: $black;
     }
+  }
 }

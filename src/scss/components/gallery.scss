@@ -3,6 +3,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding: 150px 0 150px;
+  @include mobile-sm {
+    padding: 50px 0;
+  }
   &__title {
     font-family: "Montserrat-Bold";
     font-weight: bold;
@@ -11,6 +14,11 @@
     color: #fff;
     text-align: center;
     margin: 0 0 10px;
+    @include mobile-sm {
+      font-size: 36px;
+      line-height: 44px;
+      margin-bottom: 5px;
+    }
   }
   &__subtitle {
     font-size: 22px;
@@ -19,6 +27,11 @@
     display: block;
     margin: 0 0 30px;
     text-align: center;
+    @include mobile-sm {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 15px;
+    }
   }
 
   &__list {
@@ -32,6 +45,11 @@
     align-items: center;
     margin-top: 85px;
     margin-bottom: 7px;
+    @include mobile-sm {
+      margin-top: 35px;
+      margin-bottom: 10px;
+      flex-direction: column;
+    }
     &__link {
       margin: 0 auto;
     }
@@ -44,6 +62,9 @@
       font-size: 22px;
       line-height: 32px;
       color: #fff;
+      @include mobile-sm {
+        margin-bottom: 5px;
+      }
     }
   }
 }
@@ -79,6 +100,9 @@
   }
   &--top {
     margin-bottom: 30px;
+    @include mobile-sm {
+      margin-bottom: 15px;
+    }
   }
   &--bottom {
   }

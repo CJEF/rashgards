@@ -5,16 +5,28 @@
   position: relative;
   padding: 120px 0 155px;
   position: relative;
+  @include mobile-sm {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
   .swiper-line {
     top: -120px;
   }
   &__title {
     text-align: center;
     margin: 0 0 40px;
+    @include mobile-sm {
+      font-size: 22px;
+line-height: 27px;
+    }
     span {
       display: block;
       font-size: 22px;
       line-height: 32px;
+      @include mobile-sm {
+        font-size: 16px;
+line-height: 22px;
+      }
     }
   }
 
@@ -32,6 +44,10 @@
       overflow: hidden;
       text-overflow: ellipsis;
       background-color: transparent;
+      @media (max-width: 400px) {
+        min-width: 140px;
+        min-height: 70px;
+      }
       &.active {
         background-color: $black;
         color: #fff;
@@ -45,6 +61,9 @@
     &__item {
       + .catalog-type__item {
         margin-left: 30px;
+        @media (max-width: 400px) {
+          margin-left: 20px;
+        }
       }
     }
 
@@ -59,6 +78,12 @@
     padding: 15px 40px;
     color: $input-gray;
     stroke-width: 2px;
+    @include mobile-sm {
+      padding: 11px 24px;
+    }
+    @include mobile-ex-sm {
+      padding: 11px 10px;
+    }
     &:hover {
       border-color: $black;
       color: $black;
@@ -74,6 +99,10 @@
     }
     .btn__text {
       padding: 0 10px;
+      @include mobile-sm {
+        font-size: 18px;
+line-height: 22px;
+      }
     }
   }
 
@@ -83,7 +112,7 @@
 
   &__grid-btn {
     position: absolute;
-    top: 6px;
+    top: 3px;
     right: 0;
     padding: 0;
     svg {
@@ -99,6 +128,9 @@
       font-size: 16px;
       line-height: 26px;
       margin-left: 10px;
+      @include mobile-sm {
+        display: none;
+      }
     }
     &:hover .btn__text {
       text-decoration-color: transparent;
@@ -109,14 +141,32 @@
     display: flex;
     flex-wrap: wrap;
     margin: 40px 0 0 ;
+    @include desktop-sm {
+      flex-direction: column;
+    }
+    @media (max-width: 400px) {
+      margin-top: 0;
+    }
   }
 
   &__item {
     max-width: calc(50% - 15px);
     margin-bottom: 30px;
 
+    @include desktop-sm {
+      max-width: 60%;
+      margin: 0 auto 30px;
+    }
+    @include desktop-sm {
+      max-width: 100%
+    }
+
     &:nth-child(2n) {
       margin-left: 30px;
+      @include desktop-sm {
+        margin-left: 0;
+        margin: 0 auto 30px;
+      }
     }
   }
 }
@@ -128,13 +178,33 @@
   &__text {
     text-decoration: none;
     margin-left: 10px;
+    font-size: 18px;
+line-height: 22px;
+@include mobile-ex-sm {
+  max-width: 130px;
+}
   }
   &__btn svg {
     width: 30px;
     height: 30px;
   }
+  &__btn .filter-for__text {
+    @include mobile-sm {
+      display: none;
+    }
+  }
+  &__btn.active .filter-for__text {
+    @include mobile-sm {
+      display: block;
+    }
+  }
+
+  
   &__item + .filter-for__item {
     margin-left: 50px;
+    @include mobile-sm {
+      margin-left: 28px;
+    }
   }
 }
 
@@ -143,6 +213,12 @@
   display: flex;
   min-height: 355px;
   height: 100%;
+  @include desktop-sm {
+    justify-content: space-around;
+  }
+  @media (max-width: 550px) {
+    flex-direction: column;
+  }
   &__left {
     position: relative;
   padding: 30px 0;
@@ -183,12 +259,18 @@
       height: 100%;
       margin-top: 10px;
       z-index: 3;
+      @media (max-width: 550px) {
+        padding-bottom: 35px;
+      }
     }
     .swiper-pagination {
       display: flex;
       justify-content: center;
       bottom: 10px;
       width: 100%;
+      @media (max-width: 550px) {
+        bottom: 0;
+      }
     }
   }
   &__name {
@@ -244,12 +326,18 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media (max-width: 550px) {
+      padding-top: 10px;
+    }
     &__btn {
       padding: 14px 62px;
       display: flex;
       justify-content: center;
       margin-top: 35px;
       width: 100%;
+    }
+    &__bottom {
+      margin-top: 30px;
     }
   }
 }
@@ -390,5 +478,12 @@ os-theme-round-dark
   }
   .swiper-wrapper {
     transition-timing-function: linear !important;
+  }
+}
+
+
+.os-host-resize-disabled.os-host-scrollbar-vertical-hidden > .os-scrollbar-horizontal {
+  @media (max-width: 400px) {
+    bottom: 25px;
   }
 }

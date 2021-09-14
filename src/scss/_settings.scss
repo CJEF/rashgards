@@ -63,11 +63,19 @@ a {
   font-weight: 700;
   font-size: 42px;
   line-height: 51px;
+  @include mobile-sm {
+    font-size: 36px;
+    line-height: 44px;
+  }
 }
 
 .subtitle {
   font-size: 22px;
   line-height: 32px;
+  @include mobile-sm {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .btn {
@@ -77,6 +85,9 @@ a {
   align-items: center;
   font-size: 16px;
   line-height: 18px;
+  @include mobile-sm {
+    padding: 21px 42px;
+  }
   &--red {
     background-color: $red;
     border: 2px solid $red;
@@ -138,6 +149,10 @@ a {
     .icon-btn__text {
       color: $red;
       text-decoration-color: $red;
+      @include mobile-sm {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
     &:hover.icon-btn .icon-btn__text {
       color: $red;
@@ -172,6 +187,10 @@ a {
     width: 40px;
     height: 40px;
     transition: fill 0.3s ease-in-out;
+    @include mobile-sm {
+      width: 35px;
+      height: 35px;
+    }
   }
 }
 
