@@ -43,10 +43,10 @@ const swiperReviews = new Swiper(".swiper-reviews", {
       centeredSlides: true,
     },
     // when window width is >= 640px
-    /* 640: {
-      slidesPerView: 2,
+    640: {
+      slidesPerView: 3,
       spaceBetween: 40
-    } */
+    }
   }
 });
 
@@ -121,12 +121,12 @@ let SwiperBottom = new Swiper(".gallery-slider--bottom", {
   }
 });
 
-let SwiperLine = new Swiper(".swiper-line", {
+/* let SwiperLine = new Swiper(".swiper-line", {
   spaceBetween: 40,
   speed: 6000,
   slidesPerView: "4",
   loop: true,
-});
+}); */
 
 let fighterSlider = new Swiper(".fighter-slider", {
   spaceBetween: 30,
@@ -168,3 +168,5 @@ document.addEventListener("scroll", function() {
     scrollTop.classList.remove("active");
   }
 })
+
+

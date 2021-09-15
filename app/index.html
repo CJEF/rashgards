@@ -14,6 +14,89 @@
   <body>
     <div class="site-container">
       <section class="intro" id="intro">
+    <div class="mobile-menu-overlay ">
+        <div class="mobile-menu ">
+          <div class="header__left header-left">
+            <div class="header__logo mobile-menu__logo">
+              <svg>
+                <use xlink:href="./img/sprite.svg#footer-logo"></use>
+              </svg>
+              <button class="burger-close btn-reset">
+                  <svg>
+                  <use xlink:href='./img/sprite.svg#close-menu'></use>
+                  </svg>
+              </button>
+            </div>
+            <span class="header-left__text mobile-menu__top-text">
+              Спортивная одежда <span>GRAPPFIT</span>
+            </span>
+          </div>
+          <div class="header-info mobile-menu__info mobile-menu-info">
+              <div class="mobile-menu-info__left">
+                <a href="tel:+79193993914" class="header-socials__link mobile-menu__phone-link">
+                    <svg>
+                      <use xlink:href="./img/sprite.svg#phone"></use>
+                    </svg>
+                  </a>
+              </div>
+              <div class="mobile-menu-info__right">
+                  <a href="tel:+79193993914" class="header-info__number mobile-menu__number">+7 919 399 39 14</a>
+                  <time class="header-info__time mobile-menu__time">Ежедневно с 10:00 до 21:00</time>
+              </div>
+          </div>
+          <ul class="header-socials__list list-reset">
+            <li class="header-socials__item">
+              <a href="#" class="header-socials__link mobile-menu__socials-link">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header-socials__item">
+              <a href="#" class="header-socials__link mobile-menu__socials-link">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#telegram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header-socials__item">
+              <a href="#" class="header-socials__link mobile-menu__socials-link">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <nav class="nav">
+            <ul class="nav__list list-reset">
+              <li class="nav__item">
+                <a href="#intro" class="nav__link">Опт. предложения</a>
+              </li>
+              <li class="nav__item">
+                <a href="#advantages" class="nav__link">Преимущества</a>
+              </li>
+              <li class="nav__item">
+                <a href="#catalog" class="nav__link">Каталог</a>
+              </li>
+              <li class="nav__item">
+                <a href="#video-block" class="nav__link">Видео</a>
+              </li>
+              <li class="nav__item">
+                <a href="#gallery" class="nav__link">Галерея</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" data-modal="modal-call" class="nav__link nav__link--rounded">Перезвонить</a>
+              </li>
+              <li class="nav__item">
+                <a href="#reviews" class="nav__link">Отзывы</a>
+              </li>
+              <li class="nav__item">
+                <a href="#contacts" class="nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
   <div class="intro-top">
     <header class="header">
   <div class="header__left header-left">
@@ -27,7 +110,19 @@
     </span>
   </div>
   <div class="header__right header-right">
-    <span class="header-right__text">Связаться с нами через мессенджеры:</span>
+    <div class="header-right__block">
+      <span class="header-right__text">Связаться с нами через мессенджеры:</span>
+      <a href="tel:+79193993914" class="header-socials__link header-socials__phone-link">
+        <svg>
+          <use xlink:href='./img/sprite.svg#phone'></use>
+        </svg>
+      </a>
+      <button class="burger btn-reset" aria-label="open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
     <ul class="header-socials__list list-reset">
       <li class="header-socials__item">
         <a href="#" class="header-socials__link">
@@ -92,18 +187,18 @@
               <a href="#catalog" class="btn btn--red intro__btn">
                 <span class="btn__text">Выбрать одежду</span>
               </a>
-              <a href="#" class="icon-btn icon-btn--red">
+              <a href="#price" class="icon-btn icon-btn--red">
                 <svg>
                   <use xlink:href="./img/sprite.svg#price"></use>
                 </svg>
                 <span class="icon-btn__text">Скачать прайс-лист</span>
               </a>
               <!-- <a href="#" class="intro__btn">
-                          <svg>
-                              <use xlink:href='./img/sprite.svg#whatsapp-btn'></use>
-                          </svg>
-                          <span class="btn__text">Запросить  прайс-лист</span>
-                      </a> -->
+                <svg>
+                    <use xlink:href='./img/sprite.svg#whatsapp-btn'></use>
+                </svg>
+                <span class="btn__text">Запросить  прайс-лист</span>
+            </a> -->
             </div>
           </div>
         </div>
@@ -138,7 +233,7 @@
     <img src="./img/intro/intro-human-2.png" alt="human" class="intro-human-2">
   </div>
 </section>
- <section class="price">
+ <section class="price" id="price">
   <div class="price__info price-info">
     <div class="container price-info__container">
       <div class="price-info__left">
@@ -174,7 +269,7 @@
     </div>
   </div>
   <div class="container">
-    <div class="advantages">
+    <div class="advantages" id="advantages">
       <ul class="advantages__list list-reset">
         <li class="advantages__item">
           <div class="advantages__icon">
@@ -350,7 +445,7 @@
                                 <p class="article-price__old">от <span>4900</span> руб. за ед.</p>
                                 <p class="article-price__new">От <span>4560</span> руб. за ед.</p>
                             </div>
-                            <button class="btn btn-reset btn--red article-info__btn">Заказать</button>
+                            <button class="btn btn-reset btn--red article-info__btn" data-modal="modal-order">Заказать</button>
                         </div>
                     </div>
                 </article>
@@ -408,7 +503,7 @@
                                 <p class="article-price__old">от <span>4900</span> руб. за ед.</p>
                                 <p class="article-price__new">От <span>4560</span> руб. за ед.</p>
                             </div>
-                            <button class="btn btn-reset btn--red article-info__btn">Заказать</button>
+                            <button class="btn btn-reset btn--red article-info__btn" data-modal="modal-order">Заказать</button>
                         </div>
                     </div>
                 </article>
@@ -466,7 +561,7 @@
                                 <p class="article-price__old">от <span>4900</span> руб. за ед.</p>
                                 <p class="article-price__new">От <span>4560</span> руб. за ед.</p>
                             </div>
-                            <button class="btn btn-reset btn--red article-info__btn">Заказать</button>
+                            <button class="btn btn-reset btn--red article-info__btn" data-modal="modal-order">Заказать</button>
                         </div>
                     </div>
                 </article>
@@ -524,7 +619,7 @@
                                 <p class="article-price__old">от <span>4900</span> руб. за ед.</p>
                                 <p class="article-price__new">От <span>4560</span> руб. за ед.</p>
                             </div>
-                            <button class="btn btn-reset btn--red article-info__btn">Заказать</button>
+                            <button class="btn btn-reset btn--red article-info__btn" data-modal="modal-order">Заказать</button>
                         </div>
                     </div>
                 </article>
@@ -540,7 +635,7 @@
                     <use xlink:href='./img/sprite.svg#arrow-down'></use>
                 </svg>
             </button>
-            <button class="catalog__grid-btn btn btn-reset">
+            <button class="catalog__grid-btn btn btn-reset" data-modal="modal-size-grid">
                 <svg>
                     <use xlink:href='./img/sprite.svg#size-grid'></use>
                 </svg>
@@ -549,7 +644,7 @@
         </div>
     </div>
 </section>
-      <section class="partners">
+      <section class="partners" id="partners">
   <!-- <div class="swiper swiper-line">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
@@ -628,7 +723,7 @@
         </svg>
       </li>
     </ul>
-    <div class="fighters">
+    <div class="fighters" id="video-block">
       <div class="fighters__video fighters-video">
         <div class="fighters-video__slider">
           <div class="swiper fighters-video-slider">
@@ -724,7 +819,7 @@
           </div>
           <span class="fighters-insta__text">@tamindaroverik_mma</span>
         </a>
-        <button class="btn btn--small btn-reset fighters-item__btn btn--red">
+        <button class="btn btn--small btn-reset fighters-item__btn btn--red" data-modal="modal-fighter">
           Подробнее
         </button>
       </li>
@@ -746,7 +841,7 @@
           </div>
           <span class="fighters-insta__text">@evgeniidomozhirov.mma</span>
         </a>
-        <button class="btn btn--small btn-reset fighters-item__btn btn--red">
+        <button class="btn btn--small btn-reset fighters-item__btn btn--red" data-modal="modal-fighter">
           Подробнее
         </button>
       </li>
@@ -768,7 +863,7 @@
           </div>
           <span class="fighters-insta__text">@rock13.13</span>
         </a>
-        <button class="btn btn--small btn-reset fighters-item__btn btn--red">
+        <button class="btn btn--small btn-reset fighters-item__btn btn--red" data-modal="modal-fighter">
           Подробнее
         </button>
       </li>
@@ -850,7 +945,7 @@
   </div>
 </section>
 
-      <section class="gallery">
+      <section class="gallery" id="gallery">
   <h2 class="gallery__title title">Галерея</h2>
   <span class="gallery__subtitle subtitle">Выполненная на заказ продукция</span>
 
@@ -1190,7 +1285,7 @@
 </section>
 
       
-      <section class="reviews">
+      <section class="reviews" id="reviews">
   <div class="container container--small">
     <h2 class="reviews__title title">Отзывы</h2>
     <span class="reviews__subtitle text-center"
@@ -1283,7 +1378,7 @@
   </div>
 </section>
 
-      <section class="contacts">
+      <section class="contacts" id="contacts">
     <div id="map">
         <div class="contacts__info">
             <h2 class="contacts__title title">Наши контакты</h2>
@@ -1317,7 +1412,7 @@
         </div>
     </div>
 </section>
-      <footer class="footer">
+      <footer class="footer" id="footer">
   <a href="#intro" class="scroll-top active">
     <svg>
       <use xlink:href="img/sprite.svg#scroll-top">
@@ -1337,7 +1432,7 @@
     </div>
     <div class="footer-agreement">
       <small class="footer-agreement__text">© 2021 Все права защищены</small>
-      <button class="footer-agreement__btn btn-reset">
+      <button class="footer-agreement__btn btn-reset" data-modal="agreement">
         Политика конфиденциальности
       </button>
     </div>
@@ -1363,7 +1458,7 @@
   </div>
 </footer>
 
-      <div class="modal-wrapper modal-call overlay">
+      <div class="modal-wrapper modal-call" id="modal-call">
     <div class="modal modal--sm">
         <button class="modal__close btn-reset">
             <svg>
@@ -1387,7 +1482,7 @@
         </div>
     </div>
 </div>
-      <div class="modal-wrapper modal-order overlay">
+      <div class="modal-wrapper modal-order" id="modal-order">
     <div class="modal modal--sm">
         <button class="modal__close btn-reset">
             <svg>
@@ -1422,7 +1517,7 @@
         </div>
     </div>
 </div>
-      <div class="modal-wrapper modal-fighter overlay">
+      <div class="modal-wrapper modal-fighter" id="modal-fighter">
   <div class="modal modal--md">
     <button class="modal__close btn-reset">
       <svg>
@@ -1513,17 +1608,17 @@
     <dl class="fighter-info__more more-info">
       <div class="more-info__item">
         <dt class="more-info__key">Место рождения:</dt>
-        <dl class="more-info__value">Республика Казахстан, город Кокшетау</dl>
+        <dd class="more-info__value">Республика Казахстан, город Кокшетау</dd>
       </div>
       <div class="more-info__item">
         <dt class="more-info__key">Место жительство:</dt>
-        <dl class="more-info__value">Российская Федерация, город Омск</dl>
+        <dd class="more-info__value">Российская Федерация, город Омск</dd>
       </div>
       <div class="more-info__item">
         <dt class="more-info__key">Знание языков:</dt>
-        <dl class="more-info__value">
+        <dd class="more-info__value">
           Русский, Татарский, Казахский, Английский
-        </dl>
+        </dd>
       </div>
     </dl>
     <p class="fighter-career">
@@ -1614,7 +1709,7 @@
   </div>
 </div>
 
-      <div class="modal-wrapper modal-agreement overlay">
+      <div class="modal-wrapper modal-agreement" id="agreement">
     <div class="modal modal--md">
         <button class="modal__close btn-reset">
             <svg>
@@ -1637,7 +1732,7 @@
         </div>
     </div>
 </div>
-      <div class="modal-wrapper modal-size-grid">
+      <div class="modal-wrapper modal-size-grid" id="modal-size-grid">
     <div class="modal modal--lg">
         <button class="modal__close btn-reset">
             <svg>

@@ -1,10 +1,184 @@
 // console.log('');
 "use strict";
+"use strict";
+
+/* menu */
+function closeMenu() {
+  menuOverlay.classList.remove("active");
+  menu.classList.remove("active");
+}
+
+var menu = document.querySelector(".mobile-menu");
+var menuOverlay = document.querySelector(".mobile-menu-overlay");
+var burger = document.querySelector(".burger");
+var closeBurger = document.querySelector(".burger-close");
+var navLink = document.querySelectorAll(".nav__link");
+burger.addEventListener("click", function () {
+  menuOverlay.classList.add("active");
+  menu.classList.add("active");
+});
+closeBurger.addEventListener("click", function () {
+  closeMenu();
+});
+navLink.forEach(function (link) {
+  link.addEventListener("click", function () {
+    closeMenu();
+  });
+});
 // console.log('');
 "use strict";
-/* const swiper = new Swiper('.swiper', {
-    loop: true,
-}); */
+"use strict";
+
+var callbackBtn = document.querySelectorAll("a.nav__link[data-modal]");
+var orderBtn = document.querySelectorAll("button.article-info__btn[data-modal]");
+var agreement = document.querySelectorAll("button.footer-agreement__btn[data-modal]");
+var sizeGridBtn = document.querySelectorAll("button.catalog__grid-btn[data-modal]");
+var fighterBtn = document.querySelectorAll("button.fighters-item__btn[data-modal]");
+var closeBtn = document.querySelectorAll(".modal__close");
+var body = document.querySelector('body');
+
+function openModal(e) {
+  console.log(fighterBtn);
+  var target = e.target; // console.log("tar", target.closest('[data-modal]'));
+
+  var targetWrap = target.closest('[data-modal]');
+  var btnData = targetWrap.getAttribute('data-modal');
+  var id = "#".concat(btnData);
+  console.log(id);
+  var modal = document.querySelector(id);
+  var overlay = modal.closest(".modal-wrapper");
+  modal.classList.add("active");
+  overlay.classList.add("active");
+  body.classList.add('overflow-hidden');
+}
+
+function closeModal(e) {
+  var target = e.target;
+  var modal = target.closest(".modal");
+  var overlay = target.closest(".modal-wrapper");
+  modal.classList.remove('active');
+  overlay.classList.remove("active"); // modal.forEach(function(elem) {
+  // if (!elem.classList.contains('active')) {
+  //   console.log(elem);
+
+  body.classList.remove('overflow-hidden'); // }
+  // })
+}
+
+fighterBtn.forEach(function (elem) {
+  elem.addEventListener("click", openModal);
+});
+sizeGridBtn.forEach(function (elem) {
+  elem.addEventListener("click", openModal);
+});
+orderBtn.forEach(function (elem) {
+  elem.addEventListener("click", openModal);
+});
+callbackBtn.forEach(function (elem) {
+  elem.addEventListener("click", openModal);
+});
+closeBtn.forEach(function (btn) {
+  btn.addEventListener("click", closeModal);
+});
+agreement.forEach(function (elem) {
+  elem.addEventListener("click", openModal);
+});
+// let SwiperTop = new Swiper(".gallery-slider--top", {
+//   spaceBetween: 15,
+// //   centeredSlides: true,
+//   speed: 3000,
+//   loop: true,
+//   slidesPerView: "6",
+// //   allowTouchMove: false,
+// //   disableOnInteraction: true,
+//   // mousewheel: false,
+//   breakpoints: {
+//     // when window width is >= 320px
+//     320: {
+//       slidesPerView: 2,
+//       spaceBetween: 20,
+//     },
+//     // when window width is >= 640px
+//     640: {
+//       slidesPerView: 4,
+//       spaceBetween: 30,
+//     },
+//   },
+// });
+// let SwiperBottom = new Swiper(".gallery-slider--bottom", {
+//   spaceBetween: 15,
+// //   centeredSlides: true,
+//   speed: 3000,
+//   loop: true,
+//   slidesPerView: "6",
+// //   allowTouchMove: false,
+// //   disableOnInteraction: true,
+//   breakpoints: {
+//     // when window width is >= 320px
+//     320: {
+//       slidesPerView: 2,
+//       spaceBetween: 20,
+//     },
+//     // when window width is >= 640px
+//     640: {
+//       slidesPerView: 4,
+//       spaceBetween: 40,
+//     },
+//   },
+// });
+// /* let SwiperLine = new Swiper(".swiper-line", {
+//     spaceBetween: 40,
+//     speed: 6000,
+//     slidesPerView: "4",
+//     loop: true,
+//   }); */
+// let fighterSlider = new Swiper(".fighter-slider", {
+//   spaceBetween: 30,
+//   slidesPerView: "3",
+// });
+// const swiper = new Swiper(".swiper", {
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+// });
+// const swiperReviews = new Swiper(".swiper-reviews", {
+//   pagination: {
+//     el: ".swiper-pagination-reviews",
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   spaceBetween: 25,
+//   // centeredSlides: true,
+//   slidesPerView: 3,
+//   /* simulateTouch: false,
+//     preventInteractionOnTransition: true,
+//     mousewheelControl: false,
+//     onlyExternal: false,
+//     roundLengths: false,
+//     preventClicks: false,
+//     noSwiping: true,
+//     draggable: false,
+//     allowTouchMove: false,
+//     noSwiping: true,
+//     noSwipingClass: "swiper-slide", */
+//   breakpoints: {
+//     // when window width is >= 320px
+//     320: {
+//       slidesPerView: 1,
+//       spaceBetween: 0,
+//       centeredSlides: true,
+//     },
+//     // when window width is >= 640px
+//     640: {
+//       slidesPerView: 3,
+//       spaceBetween: 40,
+//     },
+//   },
+// });
 "use strict";
 "use strict";
 
@@ -95,13 +269,12 @@ var swiperReviews = new Swiper(".swiper-reviews", {
       slidesPerView: 1,
       spaceBetween: 0,
       centeredSlides: true
-    } // when window width is >= 640px
-
-    /* 640: {
-      slidesPerView: 2,
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 3,
       spaceBetween: 40
-    } */
-
+    }
   }
 });
 swiperReviews.mousewheel.enable();
@@ -168,12 +341,13 @@ var SwiperBottom = new Swiper(".gallery-slider--bottom", {
     }
   }
 });
-var SwiperLine = new Swiper(".swiper-line", {
+/* let SwiperLine = new Swiper(".swiper-line", {
   spaceBetween: 40,
   speed: 6000,
   slidesPerView: "4",
-  loop: true
-});
+  loop: true,
+}); */
+
 var fighterSlider = new Swiper(".fighter-slider", {
   spaceBetween: 30,
   slidesPerView: "3"
