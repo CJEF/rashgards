@@ -120,6 +120,10 @@ a {
   border: 1px solid $input-gray;
   border-radius: 50px;
   background-color: #fff;
+
+  @include mobile-sm {
+    padding: 18px 45px;
+  }
   &::placeholder {
     font-family: "Montserrat-Regular", sans-serif;
     font-weight: normal;
@@ -264,9 +268,16 @@ a {
     position: absolute;
     top: -45px;
     right: -45px;
+
+    @include tablet {
+      right: 10px;
+    }
     svg {
       width: 32px;
       height: 32px;
+      @include mobile-sm {
+        width: 25px;
+      }
     }
   }
 
@@ -278,6 +289,18 @@ a {
     line-height: 51px;
     text-align: center;
     margin: 0 0 10px;
+    @include mobile-sm {
+      font-size: 32px;
+      line-height: 34px;
+    }
+    @media (max-width:480px) {
+      font-size: 24px;
+      line-height: 26px;
+    }
+    @include mobile-ex-sm{
+      font-size: 22px;
+      line-height: 24px;
+    }
   }
 
   &__subtitle {
@@ -286,6 +309,10 @@ a {
     text-align: center;
     display: block;
     margin: 0 0 25px;
+    @include mobile-sm {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   &__input {
@@ -311,10 +338,16 @@ a {
   &--sm {
     padding: 50px 100px 100px;
     max-width: 570px;
+    @include mobile-sm {
+      padding: 35px 20px 87px;
+    }
   }
   &--md {
     max-width: 770px;
     padding: 50px 100px 100px;
+    @include tablet {
+      padding: 35px 25px 100px;
+    }
   }
   &--lg {
     max-width: 970px;
@@ -337,7 +370,7 @@ a {
   opacity: 0;
   overflow: auto;
   visibility: hidden;
-  transition: opacity 0.3s ease-in;
+  transition: opacity 0.2s ease-in, visibility .2s ease-in;
   z-index: 999;
   &.active {
     visibility: visible;

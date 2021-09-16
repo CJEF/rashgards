@@ -4,8 +4,14 @@
 .fighter-info {
   display: flex;
   margin-bottom: 20px;
+  @include mobile-sm {
+    flex-direction: column;
+  }
   &__left {
     margin-right: 30px;
+    @include mobile-sm {
+      margin-bottom: 15px;
+    }
   }
   &__item {
     display: flex;
@@ -21,10 +27,18 @@
     font-size: 16px;
     line-height: 22px;
     color: #afafaf;
+    @include mobile-sm {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
   &__value {
     font-size: 16px;
     line-height: 22px;
+    @include mobile-sm {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -32,6 +46,18 @@
   width: 570px;
   height: 295px;
   padding-bottom: 70px;
+  max-width: 100%;
+  @include mobile-sm {
+    width: 100%;
+    height: auto;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    @include mobile-sm {
+      width: 100% !important;
+    }
+  }
   .swiper-pagination {
     bottom: 28px;
   }
@@ -51,6 +77,10 @@
     line-height: 22px;
     color: #b9b9b9;
     margin-right: 5px;
+    @include mobile-sm {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
   &__value {
     font-size: 16px;
@@ -58,6 +88,10 @@
     font-family: "Montserrat-Regular", sans-serif;
     font-weight: normal;
     margin: 0;
+    @include mobile-sm {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 }
 

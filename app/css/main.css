@@ -168,6 +168,11 @@ a {
   border-radius: 50px;
   background-color: #fff;
 }
+@media (max-width: 680px) {
+  .input-default {
+    padding: 18px 45px;
+  }
+}
 .input-default::-moz-placeholder {
   font-family: "Montserrat-Regular", sans-serif;
   font-weight: normal;
@@ -331,9 +336,19 @@ a {
   top: -45px;
   right: -45px;
 }
+@media (max-width: 1024px) {
+  .modal__close {
+    right: 10px;
+  }
+}
 .modal__close svg {
   width: 32px;
   height: 32px;
+}
+@media (max-width: 680px) {
+  .modal__close svg {
+    width: 25px;
+  }
 }
 .modal__title {
   font-family: "Montserrat-Bold", sans-serif;
@@ -344,12 +359,36 @@ a {
   text-align: center;
   margin: 0 0 10px;
 }
+@media (max-width: 680px) {
+  .modal__title {
+    font-size: 32px;
+    line-height: 34px;
+  }
+}
+@media (max-width: 480px) {
+  .modal__title {
+    font-size: 24px;
+    line-height: 26px;
+  }
+}
+@media (max-width: 360px) {
+  .modal__title {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
 .modal__subtitle {
   font-size: 22px;
   line-height: 32px;
   text-align: center;
   display: block;
   margin: 0 0 25px;
+}
+@media (max-width: 680px) {
+  .modal__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 .modal__input {
   margin: 0 0 20px;
@@ -378,9 +417,19 @@ a {
   padding: 50px 100px 100px;
   max-width: 570px;
 }
+@media (max-width: 680px) {
+  .modal--sm {
+    padding: 35px 20px 87px;
+  }
+}
 .modal--md {
   max-width: 770px;
   padding: 50px 100px 100px;
+}
+@media (max-width: 1024px) {
+  .modal--md {
+    padding: 35px 25px 100px;
+  }
 }
 .modal--lg {
   max-width: 970px;
@@ -399,7 +448,7 @@ a {
   opacity: 0;
   overflow: auto;
   visibility: hidden;
-  transition: opacity 0.3s ease-in;
+  transition: opacity 0.2s ease-in, visibility 0.2s ease-in;
   z-index: 999;
 }
 .modal-wrapper.active {
@@ -2697,8 +2746,18 @@ os-theme-round-dark
   display: flex;
   margin-bottom: 20px;
 }
+@media (max-width: 680px) {
+  .fighter-info {
+    flex-direction: column;
+  }
+}
 .fighter-info__left {
   margin-right: 30px;
+}
+@media (max-width: 680px) {
+  .fighter-info__left {
+    margin-bottom: 15px;
+  }
 }
 .fighter-info__item {
   display: flex;
@@ -2715,15 +2774,43 @@ os-theme-round-dark
   line-height: 22px;
   color: #afafaf;
 }
+@media (max-width: 680px) {
+  .fighter-info__key {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 .fighter-info__value {
   font-size: 16px;
   line-height: 22px;
+}
+@media (max-width: 680px) {
+  .fighter-info__value {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 .fighter-slider {
   width: 570px;
   height: 295px;
   padding-bottom: 70px;
+  max-width: 100%;
+}
+@media (max-width: 680px) {
+  .fighter-slider {
+    width: 100%;
+    height: auto;
+  }
+}
+.fighter-slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 680px) {
+  .fighter-slider .swiper-slide {
+    width: 100% !important;
+  }
 }
 .fighter-slider .swiper-pagination {
   bottom: 28px;
@@ -2743,12 +2830,24 @@ os-theme-round-dark
   color: #b9b9b9;
   margin-right: 5px;
 }
+@media (max-width: 680px) {
+  .more-info__key {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 .more-info__value {
   font-size: 16px;
   line-height: 22px;
   font-family: "Montserrat-Regular", sans-serif;
   font-weight: normal;
   margin: 0;
+}
+@media (max-width: 680px) {
+  .more-info__value {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 .fighter-career {
