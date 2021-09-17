@@ -16,7 +16,10 @@
 }); */
 
 
-var selector = document.querySelector(".im-phone");
+var imPhone = document.querySelectorAll(".im-phone");
 
-var im = new Inputmask("99-9999999");
-im.mask(selector);
+
+imPhone.forEach(function (input) {
+    var myInputMask = new Inputmask("+7(999)-999-9999");
+    myInputMask.mask(input);
+})

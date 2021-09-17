@@ -45,9 +45,11 @@ navLink.forEach(function (link) {
         } 
     });
 }); */
-var selector = document.querySelector(".im-phone");
-var im = new Inputmask("99-9999999");
-im.mask(selector);
+var imPhone = document.querySelectorAll(".im-phone");
+imPhone.forEach(function (input) {
+  var myInputMask = new Inputmask("+7(999)-999-9999");
+  myInputMask.mask(input);
+});
 "use strict";
 
 var callbackBtn = document.querySelectorAll("a.nav__link[data-modal]");
@@ -59,13 +61,11 @@ var closeBtn = document.querySelectorAll(".modal__close");
 var body = document.querySelector('body');
 
 function openModal(e) {
-  console.log(fighterBtn);
   var target = e.target; // console.log("tar", target.closest('[data-modal]'));
 
   var targetWrap = target.closest('[data-modal]');
   var btnData = targetWrap.getAttribute('data-modal');
   var id = "#".concat(btnData);
-  console.log(id);
   var modal = document.querySelector(id);
   var overlay = modal.closest(".modal-wrapper");
   modal.classList.add("active");
@@ -105,6 +105,10 @@ agreement.forEach(function (elem) {
   elem.addEventListener("click", openModal);
 });
 "use strict";
+
+var _Swiper, _Swiper2;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var swiper = new Swiper(".swiper", {
   pagination: {
@@ -151,74 +155,71 @@ var swiperReviews = new Swiper(".swiper-reviews", {
     }
   }
 });
-var SwiperTop = new Swiper(".gallery-slider--top", {
+var SwiperTop = new Swiper(".gallery-slider--top", (_Swiper = {
   spaceBetween: 15,
   centeredSlides: true,
   speed: 6000,
+  loop: true,
   autoplay: {
     delay: 0
-  },
-  loop: true,
-  slidesPerView: "6",
-  allowTouchMove: false,
-  disableOnInteraction: true,
-  // mousewheel: false,
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 20
-    },
-    // when window width is >= 640px
-    640: {
-      slidesPerView: 4,
-      spaceBetween: 40
-    }
   }
-});
-var SwiperBottom = new Swiper(".gallery-slider--bottom", {
+}, _defineProperty(_Swiper, "loop", true), _defineProperty(_Swiper, "slidesPerView", "6"), _defineProperty(_Swiper, "allowTouchMove", false), _defineProperty(_Swiper, "disableOnInteraction", true), _defineProperty(_Swiper, "breakpoints", {
+  // when window width is >= 320px
+  320: {
+    slidesPerView: 2,
+    spaceBetween: 20
+  },
+  // when window width is >= 640px
+  640: {
+    slidesPerView: 4,
+    spaceBetween: 40
+  }
+}), _Swiper));
+var SwiperBottom = new Swiper(".gallery-slider--bottom", (_Swiper2 = {
   spaceBetween: 15,
   centeredSlides: true,
   speed: 6000,
+  loop: true,
   autoplay: {
     delay: 0
-  },
-  loop: true,
-  slidesPerView: "6",
-  allowTouchMove: false,
-  disableOnInteraction: true,
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 20
-    },
-    // when window width is >= 640px
-    640: {
-      slidesPerView: 4,
-      spaceBetween: 40
-    }
   }
-});
+}, _defineProperty(_Swiper2, "loop", true), _defineProperty(_Swiper2, "slidesPerView", "6"), _defineProperty(_Swiper2, "allowTouchMove", false), _defineProperty(_Swiper2, "disableOnInteraction", true), _defineProperty(_Swiper2, "breakpoints", {
+  // when window width is >= 320px
+  320: {
+    slidesPerView: 2,
+    spaceBetween: 20
+  },
+  // when window width is >= 640px
+  640: {
+    slidesPerView: 4,
+    spaceBetween: 40
+  }
+}), _Swiper2));
 var SwiperPartners = new Swiper(".swiper-partners", {
   autoplay: {
     delay: 0
   },
-  speed: 1000,
+  speed: 6000,
   loop: true,
-  slidesPerView: "3",
-  spaceBetween: 70,
-  // simulateTouch: false,
-  // simulateTouch: false,
-  // sliderDrag: false,
-  allowTouchMove: false,
-  // touchMoveStopPropagation: false,
-  // sliderTouch: false,
-  mousewheel: {
-    invert: false
+  spaceBetween: 35,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+      speed: 4000
+    },
+    500: {
+      slidesPerView: 4,
+      spaceBetween: 20
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 10,
+      spaceBetween: 40
+    }
   }
 });
-SwiperPartners.allowTouchMove = false;
 /* let SwiperLine = new Swiper(".swiper-line", {
   spaceBetween: 40,
   speed: 6000,

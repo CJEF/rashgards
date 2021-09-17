@@ -149,7 +149,7 @@
   }
 
   &-list {
-    padding: 20px 0;
+    padding: 20px 0 70px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -265,8 +265,17 @@
 }
 
 .swiper-partners {
+  margin-bottom: 100px;
+  @media (max-width: 500px) {
+    margin-bottom: 60px;
+  }
   .swiper-wrapper {
     transition-timing-function: linear;
     align-items: center;
+    display: flex;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
   }
 }

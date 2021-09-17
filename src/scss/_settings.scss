@@ -115,32 +115,6 @@ a {
   }
 }
 
-.input-default {
-  padding: 26px 45px;
-  border: 1px solid $input-gray;
-  border-radius: 50px;
-  background-color: #fff;
-  font-family: "Montserrat-Regular", sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 18px;
-
-  @include mobile-sm {
-    padding: 18px 45px;
-  }
-  &::placeholder {
-    font-family: "Montserrat-Regular", sans-serif;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 18px;
-    text-align: center;
-    color: $input-gray;
-  }
-  &:focus {
-    outline: none;
-  }
-}
-
 .icon-btn {
   display: flex;
   align-items: center;
@@ -201,6 +175,7 @@ a {
     }
   }
 }
+
 
 .slider {
   &__crop {
@@ -356,6 +331,9 @@ a {
   &--lg {
     max-width: 970px;
     padding: 50px 100px 100px;
+    @include tablet {
+      padding: 35px 25px 100px;
+    }
   }
 }
 .modal-wrapper {
@@ -393,3 +371,50 @@ a {
   -webkit-filter: grayscale(100%);
   /* Chrome 19+ & Safari 6+ */
 }
+
+
+.input {
+  position: relative;
+  padding: 32px 30px 20px;
+  border: 1px solid $input-gray;
+  border-radius: 50px;
+  background-color: #fff;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+
+  @include mobile-sm {
+    padding: 18px 45px;
+  }
+  &::placeholder {
+    color: $input-gray;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.input {
+  &-label {
+    position: relative;
+  }
+  &-span {
+    position: absolute;
+    font-family: "Montserrat-Regular", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: #AFAFAF;
+    transform: translateY(30px);
+    transition: transform 100ms ease-in, font-size 50ms ease-in;
+    left: 30px;
+    z-index: 1;
+  }
+}
+
+.input-label:hover .input-span, input:focus ~ .input-span, input:valid ~ .input-span {
+  transform: translateY(15px) !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+} 

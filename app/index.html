@@ -70,7 +70,7 @@
           <nav class="nav">
             <ul class="nav__list list-reset">
               <li class="nav__item">
-                <a href="#intro" class="nav__link">Опт. предложения</a>
+                <a href="#opt-price" class="nav__link">Опт. предложения</a>
               </li>
               <li class="nav__item">
                 <a href="#advantages" class="nav__link">Преимущества</a>
@@ -234,7 +234,7 @@
   </div>
 </section>
  <section class="price" id="price">
-  <div class="price__info price-info">
+  <div class="price__info price-info" id="opt-price">
     <div class="container price-info__container">
       <div class="price-info__left">
         <img
@@ -253,9 +253,9 @@
       </div>
       <form action="#" class="price-form">
         <label class="price-form__label input-label">
+          <span class="input-span">Контактный телефон</span>
           <input
-            class="price-form__input input-default im-phone"
-            placeholder="Контактный телефон"
+            class="price-form__input input im-phone"
             type="text"
           />
         </label>
@@ -689,15 +689,9 @@
       </div>
     </div>
   </div> -->
-  <div class="container container--small">
-    <img
-      src="./img/partners/partners-bg.png"
-      alt="partners"
-      class="partners__bg"
-    />
-    <h2 class="partners__title">Наши партнеры</h2>
+  <h2 class="partners__title">Наши партнеры</h2>
     <!-- Slider main container -->
-    <div class="swiper swiper-partners no-swiping-class">
+    <div class="swiper swiper-partners swiper-no-swiping">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="./img/partners/partner-1.svg" alt="partner" class="partners-slider"></div>
         <div class="swiper-slide"><img src="./img/partners/partner-2.svg" alt="partner" class="partners-slider"></div>
@@ -715,6 +709,13 @@
         <div class="swiper-slide"><img src="./img/partners/partner-14.svg" alt="partner" class="partners-slider"></div>
       </div>
     </div>
+  <div class="container container--small">
+    <img
+      src="./img/partners/partners-bg.png"
+      alt="partners"
+      class="partners__bg"
+    />
+    
     <!-- <ul class="partners__list list-reset">
       <li class="partners__item">
         <svg>
@@ -968,7 +969,7 @@
   <h2 class="gallery__title title">Галерея</h2>
   <span class="gallery__subtitle subtitle">Выполненная на заказ продукция</span>
 
-  <div class="gallery-slider--top gallery-slider swiper">
+  <div class="gallery-slider--top gallery-slider swiper swiper-no-swiping">
     <div class="swiper-wrapper">
       <!-- Slides -->
       <div class="swiper-slide gallery__item">
@@ -1114,7 +1115,7 @@
     </div>
   </div>
 
-  <div class="gallery-slider--bottom gallery-slider swiper">
+  <div class="gallery-slider--bottom gallery-slider swiper swiper-no-swiping">
     <div class="swiper-wrapper">
       <!-- Slides -->
       <div class="swiper-slide gallery__item">
@@ -1292,7 +1293,7 @@
       <form action="#" class="faq__form">
         <label class="faq__label input-label">
           <input
-            class="faq__input input-default"
+            class="faq__input input-default im-phone"
             placeholder="Контактный телефон"
             type="text"
           />
@@ -1339,7 +1340,7 @@
       </li>
     </ul>
     <div class="reviews__slider">
-      <div class="swiper swiper-reviews">
+      <div class="swiper swiper-reviews swiper-no-swiping">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
@@ -1497,8 +1498,8 @@
         <h3 class="modal__title">Перезвонить</h3>
         <span class="modal__subtitle">Введите свой телефон и мы Вам перезвоним</span>
         <form class="modal__form" action="#">
-            <input type="text" class="input-default modal-call__input modal__input" placeholder="Ваше имя">
-            <input type="text" class="input-default modal-call__input modal__input" placeholder="Контактный телефон">
+            <input type="text" class="input modal-call__input modal__input" placeholder="Ваше имя">
+            <input type="text" class="input modal-call__input modal__input im-phone" placeholder="Контактный телефон">
             <a href="#" class="btn btn--red modal__btn">Перезвонить</a>
         </form>
         <div class="modal__logo logo-rounded">
@@ -1533,7 +1534,7 @@
         </div>
         <form class="modal__form" action="#">
             <input type="text" class="input-default modal-order__input modal__input" placeholder="Ваше имя">
-            <input type="text" class="input-default modal-order__input modal__input" placeholder="Контактный телефон">
+            <input type="text" class="input-default modal-order__input modal__input im-phone" placeholder="Контактный телефон">
             <a href="#" class="btn btn--red modal__btn">Перезвонить</a>
         </form>
         <div class="modal__logo logo-rounded">

@@ -8,13 +8,11 @@ const closeBtn = document.querySelectorAll(".modal__close");
 const body = document.querySelector('body');
 
 function openModal(e) {
-    console.log(fighterBtn);
     const target = e.target;
     // console.log("tar", target.closest('[data-modal]'));
     const targetWrap = target.closest('[data-modal]');
     const btnData = targetWrap.getAttribute('data-modal');
     let id = `#${btnData}`;
-    console.log(id);
     const modal = document.querySelector(id);   
     const overlay = modal.closest(".modal-wrapper");
     modal.classList.add("active");

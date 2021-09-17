@@ -49,6 +49,7 @@ let SwiperTop = new Swiper(".gallery-slider--top", {
     spaceBetween: 15,
     centeredSlides: true,
     speed: 6000,
+    loop: true,
     autoplay: {
       delay: 0,
     },
@@ -75,6 +76,7 @@ let SwiperTop = new Swiper(".gallery-slider--top", {
     spaceBetween: 15,
     centeredSlides: true,
     speed: 6000,
+    loop: true,
     autoplay: {
       delay: 0,
     },
@@ -100,21 +102,27 @@ let SwiperTop = new Swiper(".gallery-slider--top", {
     autoplay: {
       delay: 0
     },
-    speed: 1000,
+    speed: 6000,
     loop: true,
-    slidesPerView: "3",
-    spaceBetween: 70,
-    // simulateTouch: false,
-    // simulateTouch: false,
-    // sliderDrag: false,
-    allowTouchMove: false,
-    // touchMoveStopPropagation: false,
-    // sliderTouch: false,
-    mousewheel: {
-      invert: false
+    spaceBetween: 35,
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        speed: 4000,
+      },
+      500: {
+        slidesPerView: 4,
+        spaceBetween: 20
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 10,
+        spaceBetween: 40
+      }
     }
   });
-  SwiperPartners.allowTouchMove = false;
 
   
   /* let SwiperLine = new Swiper(".swiper-line", {
