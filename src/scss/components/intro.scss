@@ -24,11 +24,10 @@
       z-index: -1;
       @include tablet {
         height: 137%;
-    }
+      }
       @include mobile-sm {
         height: 126%;
-    }
-    
+      }
     }
   }
   &__human {
@@ -37,20 +36,20 @@
     right: 0;
     user-select: none;
     @include tablet {
-        display: none;
+      display: none;
     }
   }
   &-human-2 {
     display: none;
     @include tablet {
-        display: block;
-        margin: 0 auto;
+      display: block;
+      margin: 0 auto;
     }
   }
   &__top {
     margin-top: 60px;
     @include mobile-sm {
-        margin-top: 0;
+      margin-top: 0;
     }
   }
   &__title {
@@ -62,31 +61,30 @@
     margin: 0 0 20px;
     color: #fff;
     @include mobile-sm {
-        font-size: 32px;
-line-height: 34px;
+      font-size: 32px;
+      line-height: 34px;
     }
     span {
-        color: $red;
+      color: $red;
     }
-}
-&__subtitle {
+  }
+  &__subtitle {
     font-size: 22px;
     line-height: 32px;
     color: #fff;
     margin: 0 0 32px;
     max-width: 570px;
     @include mobile-sm {
-        font-size: 18px;
-line-height: 24px;
+      font-size: 18px;
+      line-height: 24px;
     }
-    
   }
   &__teasers {
     display: flex;
     align-items: center;
     @include mobile-sm {
-        flex-direction: column;
-        align-items: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
   &__btns {
@@ -94,18 +92,17 @@ line-height: 24px;
     align-items: center;
     margin-top: 50px;
     @include mobile-sm {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 30px;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 30px;
     }
-    
   }
 
   &__btn {
     margin-right: 30px;
     @include mobile-sm {
-        margin-right: 0;
-        margin-bottom: 20px;
+      margin-right: 0;
+      margin-bottom: 20px;
     }
   }
 
@@ -118,7 +115,7 @@ line-height: 24px;
     position: relative;
     top: -30px;
     @include tablet {
-        top: 20px;
+      top: 20px;
     }
   }
 
@@ -128,10 +125,10 @@ line-height: 24px;
     left: 50%;
     transform: translateX(-50%);
     @include tablet {
-        top: -125px;
+      top: -125px;
     }
     @include mobile-sm {
-        top: -145px;
+      top: -145px;
     }
   }
 
@@ -142,20 +139,19 @@ line-height: 24px;
       margin: 0;
       @include mobile-sm {
         font-size: 18px;
-line-height: 26px;
-        }
+        line-height: 26px;
+      }
     }
     &__term {
-        font-family: "Montserrat-Bold", sans-serif;
-        font-weight: bold;
-        font-size: 42px;
+      font-family: "Montserrat-Bold", sans-serif;
+      font-weight: bold;
+      font-size: 42px;
+      line-height: 50px;
+      color: $red;
+      @include mobile-sm {
+        font-size: 36px;
         line-height: 50px;
-        color: $red;
-        @include mobile-sm {
-            font-size: 36px;
-            line-height: 50px;
-          }
-      
+      }
     }
     &__text {
       max-width: 570px;
@@ -164,7 +160,7 @@ line-height: 26px;
       margin: 17px 0 0;
       @include mobile-sm {
         font-size: 14px;
-line-height: 22px;
+        line-height: 22px;
       }
     }
   }
@@ -200,8 +196,8 @@ line-height: 22px;
   + .teaser {
     margin-left: 15px;
     @include mobile-sm {
-        margin-left: 0;
-        margin-top: 10px;
+      margin-left: 0;
+      margin-top: 10px;
     }
   }
 }
@@ -236,4 +232,12 @@ line-height: 22px;
   100% {
     transform: rotate(360deg);
   }
+}
+
+.input:hover ~ .input-span,
+input:focus ~ .input-span,
+input:valid ~ .input-span {
+  transform: translateY(15px) !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
 }
