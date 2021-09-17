@@ -10,7 +10,13 @@
     padding-top: 50px;
   }
   .swiper-line {
-    top: -120px;
+    top: -43px;
+    @include desktop-xl {
+      top: -72px;
+    }
+    @include mobile-sm {
+      top: -102px;
+    }
   }
   &__title {
     text-align: center;

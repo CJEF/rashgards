@@ -19,8 +19,14 @@
             </div>
         </div>
         <form class="modal__form" action="#">
-            <input type="text" class="input-default modal-order__input modal__input" placeholder="Ваше имя">
-            <input type="text" class="input-default modal-order__input modal__input im-phone" placeholder="Контактный телефон">
+            <label class="input-label modal-label">
+                <input type="text" class="input modal-order__input modal__input" required>
+                <span class="input-span">Контактный телефон</span>
+              </label>
+            <label class="input-label modal-label">
+                <input type="text" class="input modal-order__input modal__input im-phone" required>
+                <span class="input-span">Контактный телефон</span>
+              </label>
             <a href="#" class="btn btn--red modal__btn">Перезвонить</a>
         </form>
         <div class="modal__logo logo-rounded">

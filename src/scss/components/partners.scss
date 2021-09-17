@@ -4,7 +4,7 @@
   // background-color: #F0F0F0;
 
   .swiper-line {
-    top: 221px;
+    top: 112px;
   }
 
   .container {
@@ -14,7 +14,7 @@
   &__bg {
     position: absolute;
     left: -71%;
-    top: 26%;
+    top: 20%;
     z-index: -1;
     @include desktop-sm {
       display: none;
@@ -109,6 +109,9 @@
 }
 
 .fighters {
+  &:first-of-type {
+    padding-top: 102px;
+  }
   &:last-of-type .fighters-video {
     flex-direction: row-reverse;
     @include tablet {

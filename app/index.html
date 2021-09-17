@@ -253,11 +253,11 @@
       </div>
       <form action="#" class="price-form">
         <label class="price-form__label input-label">
-          <span class="input-span">Контактный телефон</span>
           <input
             class="price-form__input input im-phone"
-            type="text"
+            type="text" required
           />
+          <span class="input-span">Контактный телефон</span>
         </label>
         <a href="#" class="price-form__btn btn btn--red">Скачать прайс-лист</a>
       </form>
@@ -330,15 +330,50 @@
 </section>
 
       <section class="catalog" id="catalog">
-    <!-- <div class="swiper swiper-line">
+    <div class="swiper swiper-line">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-              <svg>
-                  <use xlink:href="./img/sprite.svg#animate-line"></use>
-              </svg>
+            <svg>
+              <use xlink:href="./img/sprite.svg#animate-line"></use>
+            </svg>
+          </div>
+          <div class="swiper-slide">
+            <svg>
+              <use xlink:href="./img/sprite.svg#animate-line"></use>
+            </svg>
+          </div>
+          <div class="swiper-slide">
+            <svg>
+              <use xlink:href="./img/sprite.svg#animate-line"></use>
+            </svg>
+          </div>
+          <div class="swiper-slide">
+            <svg>
+              <use xlink:href="./img/sprite.svg#animate-line"></use>
+            </svg>
+          </div>
+          <div class="swiper-slide">
+            <svg>
+              <use xlink:href="./img/sprite.svg#animate-line"></use>
+            </svg>
+          </div>
+          <div class="swiper-slide">
+            <svg>
+              <use xlink:href="./img/sprite.svg#animate-line"></use>
+            </svg>
+          </div>
+          <div class="swiper-slide">
+            <svg>
+              <use xlink:href="./img/sprite.svg#animate-line"></use>
+            </svg>
+          </div>
+          <div class="swiper-slide">
+            <svg>
+              <use xlink:href="./img/sprite.svg#animate-line"></use>
+            </svg>
           </div>
         </div>
-      </div> -->
+      </div>
     <div class="container">
         <h2 class="catalog__title title">По Вашему запросу <span>мы можем изготовить</span></h2>
         <div class="catalog__filter catalog-filter">
@@ -645,7 +680,7 @@
     </div>
 </section>
       <section class="partners" id="partners">
-  <!-- <div class="swiper swiper-line">
+  <div class="swiper swiper-line">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <svg>
@@ -688,7 +723,7 @@
         </svg>
       </div>
     </div>
-  </div> -->
+  </div>
   <h2 class="partners__title">Наши партнеры</h2>
     <!-- Slider main container -->
     <div class="swiper swiper-partners swiper-no-swiping">
@@ -715,34 +750,6 @@
       alt="partners"
       class="partners__bg"
     />
-    
-    <!-- <ul class="partners__list list-reset">
-      <li class="partners__item">
-        <svg>
-          <use xlink:href="./img/sprite.svg#partner-1"></use>
-        </svg>
-      </li>
-      <li class="partners__item">
-        <svg>
-          <use xlink:href="./img/sprite.svg#partner-2"></use>
-        </svg>
-      </li>
-      <li class="partners__item">
-        <svg>
-          <use xlink:href="./img/sprite.svg#partner-3"></use>
-        </svg>
-      </li>
-      <li class="partners__item">
-        <svg>
-          <use xlink:href="./img/sprite.svg#partner-4"></use>
-        </svg>
-      </li>
-      <li class="partners__item">
-        <svg>
-          <use xlink:href="./img/sprite.svg#partner-5"></use>
-        </svg>
-      </li>
-    </ul> -->
     <div class="fighters" id="video-block">
       <div class="fighters__video fighters-video">
         <div class="fighters-video__slider">
@@ -1284,7 +1291,9 @@
     <span class="insta-default__text">@grappfit.ru</span>
   </a>
 
-  <div class="faq">
+</section>
+
+      <section class="faq">
     <div class="container">
       <h2 class="faq__title title--small">Есть дополнительные вопросы?</h2>
       <span class="faq__subtitle subtitle--small"
@@ -1293,18 +1302,15 @@
       <form action="#" class="faq__form">
         <label class="faq__label input-label">
           <input
-            class="faq__input input-default im-phone"
-            placeholder="Контактный телефон"
-            type="text"
+            class="faq__input input im-phone"
+            type="text" required
           />
+          <span class="input-span">Контактный телефон</span>
         </label>
         <a href="#" class="faq__btn btn btn--red">Перезвонить</a>
       </form>
     </div>
-  </div>
-</section>
-
-      
+  </section>
       <section class="reviews" id="reviews">
   <div class="container container--small">
     <h2 class="reviews__title title">Отзывы</h2>
@@ -1498,8 +1504,14 @@
         <h3 class="modal__title">Перезвонить</h3>
         <span class="modal__subtitle">Введите свой телефон и мы Вам перезвоним</span>
         <form class="modal__form" action="#">
-            <input type="text" class="input modal-call__input modal__input" placeholder="Ваше имя">
-            <input type="text" class="input modal-call__input modal__input im-phone" placeholder="Контактный телефон">
+            <label class="input-label modal-label">
+                <input type="text" class="input modal-call__input modal__input" required>
+                <span class="input-span">Ваше имя</span>
+            </label>
+            <label class="input-label modal-label">
+                <input type="text" class="input modal-call__input modal__input im-phone" required>
+                <span class="input-span">Контактный телефон</span>
+              </label>
             <a href="#" class="btn btn--red modal__btn">Перезвонить</a>
         </form>
         <div class="modal__logo logo-rounded">
@@ -1533,8 +1545,14 @@
             </div>
         </div>
         <form class="modal__form" action="#">
-            <input type="text" class="input-default modal-order__input modal__input" placeholder="Ваше имя">
-            <input type="text" class="input-default modal-order__input modal__input im-phone" placeholder="Контактный телефон">
+            <label class="input-label modal-label">
+                <input type="text" class="input modal-order__input modal__input" required>
+                <span class="input-span">Контактный телефон</span>
+              </label>
+            <label class="input-label modal-label">
+                <input type="text" class="input modal-order__input modal__input im-phone" required>
+                <span class="input-span">Контактный телефон</span>
+              </label>
             <a href="#" class="btn btn--red modal__btn">Перезвонить</a>
         </form>
         <div class="modal__logo logo-rounded">

@@ -233,11 +233,3 @@
     transform: rotate(360deg);
   }
 }
-
-.input:hover ~ .input-span,
-input:focus ~ .input-span,
-input:valid ~ .input-span {
-  transform: translateY(15px) !important;
-  font-size: 13px !important;
-  line-height: 18px !important;
-}

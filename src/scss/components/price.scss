@@ -8,6 +8,11 @@
     @include mobile-sm {
       padding: 30px 0;
     }
+    &__block {
+      @media (max-width: 430px) {
+        width: 100%;
+      }
+    }
     &__container {
       display: flex;
       align-items: center;
@@ -25,6 +30,9 @@
       }
       @include mobile-sm {
         flex-direction: column;
+      }
+      @media (max-width: 430px) {
+        width: 100%;
       }
     }
     &__rashgards {
@@ -67,12 +75,19 @@
     @include mobile-sm {
       flex-direction: column;
     } 
+    @media (max-width: 430px) {
+      width: 100%;
+    }
     &__label {
       margin-right: 30px;
 
       @include mobile-sm {
+        margin-right: 0;
         margin-bottom: 10px;
       } 
+      @media (max-width: 430px) {
+        width: 100%;
+      }
     }
     &__input {
       max-width: 270px;
@@ -83,9 +98,11 @@
         margin-right: 0;
         width: 100%;
         max-width: 100%;
-        padding: 20px 42px;
         max-height: 64px;
       } 
+      @media (max-width: 430px) {
+        width: 100%;
+      }
     }
     &__btn {
       max-width: 270px;
@@ -202,6 +219,7 @@
     border-radius: 50%;
     background-color: $blur;
     transition: background-color .3s ease-in;
+    margin-right: 30px;
     svg {
       width: 40px;
       height: 54px;

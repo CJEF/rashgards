@@ -242,6 +242,10 @@ a {
   /* top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); */
+  &-label {
+    display: block;
+    margin: 0 0 20px;
+  }
 
   &__close {
     position: absolute;
@@ -251,9 +255,18 @@ a {
     @include tablet {
       right: 10px;
     }
+    &:hover {
+      svg {
+        stroke: $red;
+      }
+    }
     svg {
       width: 32px;
       height: 32px;
+      stroke: #fff;
+      fill: #fff;
+      stroke-width: 3;
+      transition: stroke .2s ease-in;
       @include mobile-sm {
         width: 25px;
       }
@@ -295,7 +308,6 @@ a {
   }
 
   &__input {
-    margin: 0 0 20px;
     width: 100%;
     &::placeholder {
       text-align: left;
@@ -318,7 +330,7 @@ a {
     padding: 50px 100px 100px;
     max-width: 570px;
     @include mobile-sm {
-      padding: 35px 20px 87px;
+      padding: 35px 30px 87px;
     }
   }
   &--md {
@@ -375,7 +387,7 @@ a {
 
 .input {
   position: relative;
-  padding: 32px 30px 20px;
+  padding: 36px 30px 18px;
   border: 1px solid $input-gray;
   border-radius: 50px;
   background-color: #fff;
@@ -385,17 +397,14 @@ a {
   line-height: 18px;
 
   @include mobile-sm {
-    padding: 18px 45px;
+    padding: 27px 30px 12px;
   }
-  &::placeholder {
+  /* &::placeholder {
     color: $input-gray;
-  }
+  } */
   &:focus {
     outline: none;
   }
-}
-
-.input {
   &-label {
     position: relative;
   }
@@ -406,15 +415,19 @@ a {
     font-size: 16px;
     line-height: 18px;
     color: #AFAFAF;
-    transform: translateY(30px);
+    top: 50%;
+    transform: translateY(-50%);
     transition: transform 100ms ease-in, font-size 50ms ease-in;
     left: 30px;
     z-index: 1;
   }
 }
 
-.input:hover ~ .input-span, .input:focus ~ .input-span, .input:valid ~ .input-span {
-  transform: translateY(15px) !important;
-  font-size: 13px !important;
-  line-height: 18px !important;
+.input:hover ~ .input-span, .input:focus ~ .input-span, .input:valid ~ .input-span, .input-span:hover {
+  transform: translateY(-150%);
+  font-size: 13px;
+  line-height: 18px;
+  @include mobile-sm {
+    transform: translateY(-141%);
+  }
 } 

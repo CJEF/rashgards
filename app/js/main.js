@@ -220,13 +220,35 @@ var SwiperPartners = new Swiper(".swiper-partners", {
     }
   }
 });
-/* let SwiperLine = new Swiper(".swiper-line", {
+var SwiperLine = new Swiper(".swiper-line", {
   spaceBetween: 40,
+  autoplay: {
+    delay: 0
+  },
   speed: 6000,
-  slidesPerView: "4",
   loop: true,
-}); */
-
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      speed: 4000
+    },
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    900: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    // when window width is >= 640px
+    1800: {
+      slidesPerView: 5,
+      spaceBetween: 40
+    }
+  }
+});
 var fighterSlider = new Swiper(".fighter-slider", {
   spaceBetween: 30,
   slidesPerView: "3",
