@@ -265,54 +265,45 @@ var fighterSlider = new Swiper(".fighter-slider", {
     }
   }
 });
-// ymaps.ready(function () {
-//     var myMap = new ymaps.Map(
-//         "map",
-//         {
-//           center: [55.824213, 37.652984],
-//           zoom: 18,
-//         },
-//         {
-//           searchControlProvider: "yandex#search",
-//         }
-//       ),
-//       // Создаём макет содержимого.
-//       MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-//         '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-//       ),
-//       myPlacemark = new ymaps.Placemark(
-//         myMap.getCenter(),
-//         {
-//           hintContent: "GRAPPFIT",
-//           balloonContent: `<img src="./img/map-logo.svg" class="questions__map-logo" alt="map image"><p class="questions__map-text">г.Екатеринбург, ул. Бориса Галушкина, 10</p>`,
-//         },
-//         {
-//           // Опции.
-//           // Необходимо указать данный тип макета.
-//           iconLayout: "default#image",
-//           // Своё изображение иконки метки.
-//           iconImageHref: "./img/location-icon.svg",
-//           // Размеры метки.
-//           iconImageSize: [34, 48],
-//           // Смещение левого верхнего угла иконки относительно
-//           // её "ножки" (точки привязки).
-//           iconImageOffset: [-18, -55],
-//         }
-//       );
-//     myMap.geoObjects.add(myPlacemark)
-//     /* document.addEventListener("DOMContentLoaded", function() {
-//       setTimeout(() => {
-//         // const mapBaloon = document.querySelector(".ymaps-2-1-79-image");
-//         // mapBaloon.click();
-//         var balloon = new ymaps.Balloon(myMap);
-//         balloon.open(myMap.getCenter());
-//         // console.log(mapBaloon);
-//       }, 3000);
-//     }) */
-//     // var balloon = new ymaps.Balloon(myMap);
-//     // balloon.open();
-//   });
 "use strict";
+
+ymaps.ready(function () {
+  var myMap = new ymaps.Map("map", {
+    center: [55.824213, 37.652984],
+    zoom: 18
+  }, {
+    searchControlProvider: "yandex#search"
+  }),
+      // Создаём макет содержимого.
+  MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'),
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+    hintContent: "GRAPPFIT",
+    balloonContent: "<img src=\"./img/map-logo.svg\" class=\"questions__map-logo\" alt=\"map image\"><p class=\"questions__map-text\">\u0433.\u0415\u043A\u0430\u0442\u0435\u0440\u0438\u043D\u0431\u0443\u0440\u0433, \u0443\u043B. \u0411\u043E\u0440\u0438\u0441\u0430 \u0413\u0430\u043B\u0443\u0448\u043A\u0438\u043D\u0430, 10</p>"
+  }, {
+    // Опции.
+    // Необходимо указать данный тип макета.
+    iconLayout: "default#image",
+    // Своё изображение иконки метки.
+    iconImageHref: "./img/location-icon.svg",
+    // Размеры метки.
+    iconImageSize: [34, 48],
+    // Смещение левого верхнего угла иконки относительно
+    // её "ножки" (точки привязки).
+    iconImageOffset: [-18, -55]
+  });
+  myMap.geoObjects.add(myPlacemark);
+  /* document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(() => {
+      // const mapBaloon = document.querySelector(".ymaps-2-1-79-image");
+      // mapBaloon.click();
+      var balloon = new ymaps.Balloon(myMap);
+      balloon.open(myMap.getCenter());
+      // console.log(mapBaloon);
+    }, 3000);
+  }) */
+  // var balloon = new ymaps.Balloon(myMap);
+  // balloon.open();
+});
 "use strict";
 
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
