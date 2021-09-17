@@ -76,8 +76,15 @@
     text-decoration-color: $red;
     text-decoration: underline;
     transition: text-decoration-color 0.2s ease-in;
+    .proseo-path {
+      transition: fill .2s ease-in;
+      fill: #0B0B0B;
+    }
     &:hover {
       text-decoration-color: transparent;
+      .proseo-path {
+        fill: #149A43;
+      }
     }
   }
 }

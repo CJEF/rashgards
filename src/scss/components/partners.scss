@@ -263,3 +263,10 @@
 .gallery__item .video-gallery__crop svg {
   margin-left: 0;
 }
+
+.swiper-partners {
+  .swiper-wrapper {
+    transition-timing-function: linear;
+    align-items: center;
+  }
+}

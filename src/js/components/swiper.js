@@ -95,6 +95,27 @@ let SwiperTop = new Swiper(".gallery-slider--top", {
       }
     }
   });
+
+  let SwiperPartners = new Swiper(".swiper-partners", {
+    autoplay: {
+      delay: 0
+    },
+    speed: 1000,
+    loop: true,
+    slidesPerView: "3",
+    spaceBetween: 70,
+    // simulateTouch: false,
+    // simulateTouch: false,
+    // sliderDrag: false,
+    allowTouchMove: false,
+    // touchMoveStopPropagation: false,
+    // sliderTouch: false,
+    mousewheel: {
+      invert: false
+    }
+  });
+  SwiperPartners.allowTouchMove = false;
+
   
   /* let SwiperLine = new Swiper(".swiper-line", {
     spaceBetween: 40,

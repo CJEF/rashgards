@@ -196,6 +196,7 @@ line-height: 22px;
   &__btn.active .filter-for__text {
     @include mobile-sm {
       display: block;
+      text-align: left;
     }
   }
 
