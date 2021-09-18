@@ -6,7 +6,6 @@
  */
 
 
-swiperReviews.mousewheel.enable();
 
 Fancybox.bind("[data-fancybox]", {
   // Your options go here

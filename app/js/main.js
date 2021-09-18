@@ -106,165 +106,167 @@ agreement.forEach(function (elem) {
 });
 "use strict";
 
-var _Swiper, _Swiper2;
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var swiper = new Swiper(".swiper", {
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true
-  }
-});
-var swiperReviews = new Swiper(".swiper-reviews", {
-  pagination: {
-    el: ".swiper-pagination-reviews",
-    clickable: true
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  },
-  spaceBetween: 25,
-  // centeredSlides: true,
-  slidesPerView: 3,
+setTimeout(function () {
+  var _Swiper, _Swiper2;
 
-  /* simulateTouch: false,
-  preventInteractionOnTransition: true,
-  mousewheelControl: false,
-  onlyExternal: false,
-  roundLengths: false,
-  preventClicks: false,
-  noSwiping: true,
-  draggable: false,
-  allowTouchMove: false,
-  noSwiping: true,
-  noSwipingClass: "swiper-slide", */
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 0,
-      centeredSlides: true
-    },
-    // when window width is >= 640px
-    640: {
-      slidesPerView: 3,
-      spaceBetween: 40
+  var swiper = new Swiper(".swiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
     }
-  }
-});
-var SwiperTop = new Swiper(".gallery-slider--top", (_Swiper = {
-  spaceBetween: 15,
-  centeredSlides: true,
-  speed: 6000,
-  loop: true,
-  autoplay: {
-    delay: 0
-  }
-}, _defineProperty(_Swiper, "loop", true), _defineProperty(_Swiper, "slidesPerView", "6"), _defineProperty(_Swiper, "allowTouchMove", false), _defineProperty(_Swiper, "disableOnInteraction", true), _defineProperty(_Swiper, "breakpoints", {
-  // when window width is >= 320px
-  320: {
-    slidesPerView: 2,
-    spaceBetween: 20
-  },
-  // when window width is >= 640px
-  640: {
-    slidesPerView: 4,
-    spaceBetween: 40
-  }
-}), _Swiper));
-var SwiperBottom = new Swiper(".gallery-slider--bottom", (_Swiper2 = {
-  spaceBetween: 15,
-  centeredSlides: true,
-  speed: 6000,
-  loop: true,
-  autoplay: {
-    delay: 0
-  }
-}, _defineProperty(_Swiper2, "loop", true), _defineProperty(_Swiper2, "slidesPerView", "6"), _defineProperty(_Swiper2, "allowTouchMove", false), _defineProperty(_Swiper2, "disableOnInteraction", true), _defineProperty(_Swiper2, "breakpoints", {
-  // when window width is >= 320px
-  320: {
-    slidesPerView: 2,
-    spaceBetween: 20
-  },
-  // when window width is >= 640px
-  640: {
-    slidesPerView: 4,
-    spaceBetween: 40
-  }
-}), _Swiper2));
-var SwiperPartners = new Swiper(".swiper-partners", {
-  autoplay: {
-    delay: 0
-  },
-  speed: 6000,
-  loop: true,
-  spaceBetween: 35,
-  breakpoints: {
+  });
+  var swiperReviews = new Swiper(".swiper-reviews", {
+    pagination: {
+      el: ".swiper-pagination-reviews",
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    spaceBetween: 25,
+    // centeredSlides: true,
+    slidesPerView: 3,
+
+    /* simulateTouch: false,
+    preventInteractionOnTransition: true,
+    mousewheelControl: false,
+    onlyExternal: false,
+    roundLengths: false,
+    preventClicks: false,
+    noSwiping: true,
+    draggable: false,
+    allowTouchMove: false,
+    noSwiping: true,
+    noSwipingClass: "swiper-slide", */
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        centeredSlides: true
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 40
+      }
+    }
+  });
+  var SwiperTop = new Swiper(".gallery-slider--top", (_Swiper = {
+    spaceBetween: 15,
+    centeredSlides: true,
+    speed: 6000,
+    loop: true,
+    autoplay: {
+      delay: 0
+    }
+  }, _defineProperty(_Swiper, "loop", true), _defineProperty(_Swiper, "slidesPerView", "6"), _defineProperty(_Swiper, "allowTouchMove", false), _defineProperty(_Swiper, "disableOnInteraction", true), _defineProperty(_Swiper, "breakpoints", {
     // when window width is >= 320px
     320: {
       slidesPerView: 2,
-      spaceBetween: 10,
-      speed: 4000
+      spaceBetween: 20
     },
-    500: {
+    // when window width is >= 640px
+    640: {
       slidesPerView: 4,
+      spaceBetween: 40
+    }
+  }), _Swiper));
+  var SwiperBottom = new Swiper(".gallery-slider--bottom", (_Swiper2 = {
+    spaceBetween: 15,
+    centeredSlides: true,
+    speed: 6000,
+    loop: true,
+    autoplay: {
+      delay: 0
+    }
+  }, _defineProperty(_Swiper2, "loop", true), _defineProperty(_Swiper2, "slidesPerView", "6"), _defineProperty(_Swiper2, "allowTouchMove", false), _defineProperty(_Swiper2, "disableOnInteraction", true), _defineProperty(_Swiper2, "breakpoints", {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
       spaceBetween: 20
     },
     // when window width is >= 640px
     640: {
-      slidesPerView: 10,
+      slidesPerView: 4,
       spaceBetween: 40
     }
-  }
-});
-var SwiperLine = new Swiper(".swiper-line", {
-  spaceBetween: 40,
-  autoplay: {
-    delay: 0
-  },
-  speed: 6000,
-  loop: true,
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      speed: 4000
+  }), _Swiper2));
+  var SwiperPartners = new Swiper(".swiper-partners", {
+    autoplay: {
+      delay: 0
     },
-    500: {
-      slidesPerView: 2,
-      spaceBetween: 20
-    },
-    900: {
-      slidesPerView: 3,
-      spaceBetween: 20
-    },
-    // when window width is >= 640px
-    1800: {
-      slidesPerView: 5,
-      spaceBetween: 40
+    speed: 6000,
+    loop: true,
+    spaceBetween: 35,
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        speed: 4000
+      },
+      500: {
+        slidesPerView: 4,
+        spaceBetween: 20
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 10,
+        spaceBetween: 40
+      }
     }
-  }
-});
-var fighterSlider = new Swiper(".fighter-slider", {
-  spaceBetween: 30,
-  slidesPerView: "3",
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 'auto',
-      spaceBetween: 0
-      /* centeredSlides: true, */
+  });
+  var SwiperLine = new Swiper(".swiper-line", {
+    spaceBetween: 40,
+    autoplay: {
+      delay: 0
+    },
+    speed: 6000,
+    loop: true,
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        speed: 4000
+      },
+      500: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      900: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      },
+      // when window width is >= 640px
+      1800: {
+        slidesPerView: 5,
+        spaceBetween: 40
+      }
+    }
+  });
+  var fighterSlider = new Swiper(".fighter-slider", {
+    loop: true,
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 'auto' // spaceBetween: 0,
 
-    },
-    // when window width is >= 640px
-    640: {// slidesPerView: 'auto',
+        /* centeredSlides: true, */
+
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: "3"
+      }
     }
-  }
-});
+  });
+}, 1500);
 "use strict";
 
 ymaps.ready(function () {
@@ -318,7 +320,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
  * @param {number} first - первое число
  * @returns {number}
  */
-swiperReviews.mousewheel.enable();
 Fancybox.bind("[data-fancybox]", {// Your options go here
 });
 var instance = OverlayScrollbars(document.getElementById("content-1"), {});
