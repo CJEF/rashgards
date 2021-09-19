@@ -57,3 +57,12 @@ closeBtn.forEach(function (btn) {
 agreement.forEach(function (elem) {
   elem.addEventListener("click", openModal)
 });
+
+document.addEventListener("keydown", function (e) {
+  if (e.keyCode === 27) {
+    let modalWrap = document.querySelectorAll(".modal-wrapper");
+    modalWrap.forEach(function(modal) {
+      modal.classList.remove("active")
+    })
+  }
+});

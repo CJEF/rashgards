@@ -104,6 +104,14 @@ closeBtn.forEach(function (btn) {
 agreement.forEach(function (elem) {
   elem.addEventListener("click", openModal);
 });
+document.addEventListener("keydown", function (e) {
+  if (e.keyCode === 27) {
+    var modalWrap = document.querySelectorAll(".modal-wrapper");
+    modalWrap.forEach(function (modal) {
+      modal.classList.remove("active");
+    });
+  }
+});
 "use strict";
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }

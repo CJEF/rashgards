@@ -10,12 +10,12 @@
     padding-top: 50px;
   }
   .swiper-line {
-    top: -43px;
+    top: -38px;
     @include desktop-xl {
       top: -72px;
     }
     @include mobile-sm {
-      top: -102px;
+      top: -87px;
     }
   }
   &__title {
@@ -107,7 +107,7 @@ line-height: 22px;
       padding: 0 10px;
       @include mobile-sm {
         font-size: 18px;
-line-height: 22px;
+        line-height: 22px;
       }
     }
   }
@@ -188,7 +188,7 @@ line-height: 22px;
 line-height: 22px;
 @include mobile-ex-sm {
   max-width: 130px;
-}
+    }
   }
   &__btn svg {
     width: 30px;
@@ -203,6 +203,7 @@ line-height: 22px;
     @include mobile-sm {
       display: block;
       text-align: left;
+      max-width: min-content;
     }
   }
 

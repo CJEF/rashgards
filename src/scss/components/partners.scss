@@ -16,6 +16,7 @@
     left: -71%;
     top: 20%;
     z-index: -1;
+    user-select: none;
     @include desktop-sm {
       display: none;
     }
