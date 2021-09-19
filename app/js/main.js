@@ -165,14 +165,21 @@ setTimeout(function () {
     }
   });
   var SwiperTop = new Swiper(".gallery-slider--top", (_Swiper = {
-    spaceBetween: 15,
-    centeredSlides: true,
-    speed: 6000,
     loop: true,
+    loopedSlides: 10,
+    loopPreventsSlide: true,
+    loopAdditionalSlides: 10,
+    // effect: 'coverflow',
+    pauseOnMouseEnter: true,
+    // disableOnInteraction: false,
+    waitForTransition: true,
+    spaceBetween: 15,
+    // centeredSlides: true,
+    speed: 6000,
     autoplay: {
       delay: 0
     }
-  }, _defineProperty(_Swiper, "loop", true), _defineProperty(_Swiper, "slidesPerView", "6"), _defineProperty(_Swiper, "allowTouchMove", false), _defineProperty(_Swiper, "disableOnInteraction", true), _defineProperty(_Swiper, "breakpoints", {
+  }, _defineProperty(_Swiper, "loop", true), _defineProperty(_Swiper, "slidesPerView", "5"), _defineProperty(_Swiper, "breakpoints", {
     // when window width is >= 320px
     320: {
       slidesPerView: 2,
@@ -185,14 +192,21 @@ setTimeout(function () {
     }
   }), _Swiper));
   var SwiperBottom = new Swiper(".gallery-slider--bottom", (_Swiper2 = {
-    spaceBetween: 15,
-    centeredSlides: true,
-    speed: 6000,
     loop: true,
+    loopedSlides: 10,
+    loopPreventsSlide: true,
+    loopAdditionalSlides: 10,
+    // effect: 'coverflow',
+    pauseOnMouseEnter: true,
+    // disableOnInteraction: false,
+    waitForTransition: true,
+    spaceBetween: 15,
+    // centeredSlides: true,
+    speed: 6000,
     autoplay: {
       delay: 0
     }
-  }, _defineProperty(_Swiper2, "loop", true), _defineProperty(_Swiper2, "slidesPerView", "6"), _defineProperty(_Swiper2, "allowTouchMove", false), _defineProperty(_Swiper2, "disableOnInteraction", true), _defineProperty(_Swiper2, "breakpoints", {
+  }, _defineProperty(_Swiper2, "loop", true), _defineProperty(_Swiper2, "slidesPerView", "5"), _defineProperty(_Swiper2, "breakpoints", {
     // when window width is >= 320px
     320: {
       slidesPerView: 2,

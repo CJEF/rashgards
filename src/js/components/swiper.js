@@ -47,17 +47,23 @@
     
   
   let SwiperTop = new Swiper(".gallery-slider--top", {
-      spaceBetween: 15,
-      centeredSlides: true,
-      speed: 6000,
       loop: true,
+      loopedSlides: 10,
+      loopPreventsSlide: true,
+      loopAdditionalSlides: 10,
+      // effect: 'coverflow',
+      pauseOnMouseEnter: true,
+      // disableOnInteraction: false,
+      waitForTransition: true,
+      spaceBetween: 15,
+      // centeredSlides: true,
+      speed: 6000,
       autoplay: {
         delay: 0,
       },
       loop: true,
-      slidesPerView: "6",
-      allowTouchMove: false,
-      disableOnInteraction: true,
+      slidesPerView: "5",
+      // allowTouchMove: false,
       // mousewheel: false,
        breakpoints: {
         // when window width is >= 320px
@@ -70,21 +76,27 @@
           slidesPerView: 4,
           spaceBetween: 40
         }
-      }
+      },
     });
     
     let SwiperBottom = new Swiper(".gallery-slider--bottom", {
-      spaceBetween: 15,
-      centeredSlides: true,
-      speed: 6000,
       loop: true,
+      loopedSlides: 10,
+      loopPreventsSlide: true,
+      loopAdditionalSlides: 10,
+      // effect: 'coverflow',
+      pauseOnMouseEnter: true,
+      // disableOnInteraction: false,
+      waitForTransition: true,
+      spaceBetween: 15,
+      // centeredSlides: true,
+      speed: 6000,
       autoplay: {
         delay: 0,
       },
       loop: true,
-      slidesPerView: "6",
-      allowTouchMove: false,
-      disableOnInteraction: true,
+      slidesPerView: "5",
+      // allowTouchMove: false,
        breakpoints: {
         // when window width is >= 320px
         320: {
@@ -96,8 +108,9 @@
           slidesPerView: 4,
           spaceBetween: 40
         }
-      }
+      },
     });
+
   
     let SwiperPartners = new Swiper(".swiper-partners", {
       autoplay: {
