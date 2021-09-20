@@ -1553,6 +1553,14 @@ a {
   align-items: center;
   margin-bottom: 45px;
 }
+@media (max-width: 680px) {
+  .filter-for__btn {
+    max-width: -webkit-min-content;
+    max-width: -moz-min-content;
+    max-width: min-content;
+    display: inline-flex;
+  }
+}
 .filter-for__text {
   text-decoration: none;
   margin-left: 10px;

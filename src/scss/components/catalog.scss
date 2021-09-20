@@ -181,6 +181,12 @@ line-height: 22px;
   display: flex;
   align-items: center;
   margin-bottom: 45px;
+  &__btn {
+    @include mobile-sm {
+      max-width: min-content;
+      display: inline-flex;
+    }
+  }
   &__text {
     text-decoration: none;
     margin-left: 10px;

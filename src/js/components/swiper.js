@@ -163,8 +163,8 @@
         },
         // when window width is >= 640px
         1800: {
-          slidesPerView: 5,
-          spaceBetween: 40
+          slidesPerView: 6,
+          spaceBetween: 60
         }
       }
     });
