@@ -111,6 +111,76 @@
       },
     });
 
+    /* let modalSwiperBottom = new Swiper(".modal-slider--bottom", {
+      loop: true,
+      loopedSlides: 10,
+      loopPreventsSlide: true,
+      loopAdditionalSlides: 10,
+      // effect: 'coverflow',
+      pauseOnMouseEnter: true,
+      // disableOnInteraction: false,
+      waitForTransition: true,
+      spaceBetween: 15,
+      // centeredSlides: true,
+      speed: 6000,
+      autoplay: {
+        delay: 0,
+      },
+      loop: true,
+      slidesPerView: "3",
+      // allowTouchMove: false,
+       breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        // when window width is >= 640px
+        640: {
+          slidesPerView: 3,
+          autoplay: {
+            delay: 0,
+          },
+          spaceBetween: 40,
+        }
+      },
+    }); */
+
+    let modalSwiperTop = new Swiper(".modal-slider--top", {
+      loop: true,
+      loopedSlides: 10,
+      loopPreventsSlide: true,
+      loopAdditionalSlides: 10,
+      // effect: 'coverflow',
+      pauseOnMouseEnter: true,
+      // disableOnInteraction: false,
+      waitForTransition: true,
+      spaceBetween: 15,
+      // centeredSlides: true,
+      speed: 6000,
+      autoplay: {
+        delay: 0,
+      },
+      loop: true,
+      slidesPerView: "3",
+      // allowTouchMove: false,
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        // when window width is >= 640px
+        640: {
+          autoplay: {
+            delay: 0,
+          },
+          slidesPerView: 3,
+          spaceBetween: 40,
+        }
+      },
+    });
+
   
     let SwiperPartners = new Swiper(".swiper-partners", {
       autoplay: {

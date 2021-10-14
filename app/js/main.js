@@ -57,6 +57,7 @@ var orderBtn = document.querySelectorAll("button.article-info__btn[data-modal]")
 var agreement = document.querySelectorAll("button.footer-agreement__btn[data-modal]");
 var sizeGridBtn = document.querySelectorAll("button.catalog__grid-btn[data-modal]");
 var fighterBtn = document.querySelectorAll("button.fighters-item__btn[data-modal]");
+var galleryModalBtn = document.querySelectorAll("button.intro-bottom__certificates[data-modal]");
 var closeBtn = document.querySelectorAll(".modal__close");
 var body = document.querySelector('body');
 
@@ -104,6 +105,9 @@ closeBtn.forEach(function (btn) {
 agreement.forEach(function (elem) {
   elem.addEventListener("click", openModal);
 });
+galleryModalBtn.forEach(function (elem) {
+  elem.addEventListener("click", openModal);
+});
 document.addEventListener("keydown", function (e) {
   if (e.keyCode === 27) {
     var modalWrap = document.querySelectorAll(".modal-wrapper");
@@ -112,12 +116,25 @@ document.addEventListener("keydown", function (e) {
     });
   }
 });
+var modalWrapper = document.querySelectorAll(".modal-wrapper");
+modalWrapper.forEach(function (wrap) {
+  wrap.addEventListener("click", function (e) {
+    if (e.target.closest(".modal")) {
+      return;
+    }
+
+    var modalWrap = document.querySelectorAll(".modal-wrapper");
+    modalWrap.forEach(function (modal) {
+      modal.classList.remove("active");
+    });
+  });
+});
 "use strict";
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 setTimeout(function () {
-  var _Swiper, _Swiper2;
+  var _Swiper, _Swiper2, _Swiper3;
 
   var swiper = new Swiper(".swiper", {
     pagination: {
@@ -218,6 +235,71 @@ setTimeout(function () {
       spaceBetween: 40
     }
   }), _Swiper2));
+  /* let modalSwiperBottom = new Swiper(".modal-slider--bottom", {
+    loop: true,
+    loopedSlides: 10,
+    loopPreventsSlide: true,
+    loopAdditionalSlides: 10,
+    // effect: 'coverflow',
+    pauseOnMouseEnter: true,
+    // disableOnInteraction: false,
+    waitForTransition: true,
+    spaceBetween: 15,
+    // centeredSlides: true,
+    speed: 6000,
+    autoplay: {
+      delay: 0,
+    },
+    loop: true,
+    slidesPerView: "3",
+    // allowTouchMove: false,
+     breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 3,
+        autoplay: {
+          delay: 0,
+        },
+        spaceBetween: 40,
+      }
+    },
+  }); */
+
+  var modalSwiperTop = new Swiper(".modal-slider--top", (_Swiper3 = {
+    loop: true,
+    loopedSlides: 10,
+    loopPreventsSlide: true,
+    loopAdditionalSlides: 10,
+    // effect: 'coverflow',
+    pauseOnMouseEnter: true,
+    // disableOnInteraction: false,
+    waitForTransition: true,
+    spaceBetween: 15,
+    // centeredSlides: true,
+    speed: 6000,
+    autoplay: {
+      delay: 0
+    }
+  }, _defineProperty(_Swiper3, "loop", true), _defineProperty(_Swiper3, "slidesPerView", "3"), _defineProperty(_Swiper3, "breakpoints", {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+    // when window width is >= 640px
+    640: {
+      autoplay: {
+        delay: 0
+      },
+      slidesPerView: 3,
+      spaceBetween: 40
+    }
+  }), _Swiper3));
   var SwiperPartners = new Swiper(".swiper-partners", {
     autoplay: {
       delay: 0
@@ -289,45 +371,54 @@ setTimeout(function () {
     }
   });
 }, 1500);
+// ymaps.ready(function () {
+//     var myMap = new ymaps.Map(
+//         "map",
+//         {
+//           center: [55.824213, 37.652984],
+//           zoom: 18,
+//         },
+//         {
+//           searchControlProvider: "yandex#search",
+//         }
+//       ),
+//       // Создаём макет содержимого.
+//       MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+//         '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+//       ),
+//       myPlacemark = new ymaps.Placemark(
+//         myMap.getCenter(),
+//         {
+//           hintContent: "GRAPPFIT",
+//           balloonContent: `<img src="./img/map-logo.svg" class="questions__map-logo" alt="map image"><p class="questions__map-text">г.Екатеринбург, ул. Бориса Галушкина, 10</p>`,
+//         },
+//         {
+//           // Опции.
+//           // Необходимо указать данный тип макета.
+//           iconLayout: "default#image",
+//           // Своё изображение иконки метки.
+//           iconImageHref: "./img/location-icon.svg",
+//           // Размеры метки.
+//           iconImageSize: [34, 48],
+//           // Смещение левого верхнего угла иконки относительно
+//           // её "ножки" (точки привязки).
+//           iconImageOffset: [-18, -55],
+//         }
+//       );
+//     myMap.geoObjects.add(myPlacemark)
+//     /* document.addEventListener("DOMContentLoaded", function() {
+//       setTimeout(() => {
+//         // const mapBaloon = document.querySelector(".ymaps-2-1-79-image");
+//         // mapBaloon.click();
+//         var balloon = new ymaps.Balloon(myMap);
+//         balloon.open(myMap.getCenter());
+//         // console.log(mapBaloon);
+//       }, 3000);
+//     }) */
+//     // var balloon = new ymaps.Balloon(myMap);
+//     // balloon.open();
+//   });
 "use strict";
-
-ymaps.ready(function () {
-  var myMap = new ymaps.Map("map", {
-    center: [55.824213, 37.652984],
-    zoom: 18
-  }, {
-    searchControlProvider: "yandex#search"
-  }),
-      // Создаём макет содержимого.
-  MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'),
-      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-    hintContent: "GRAPPFIT",
-    balloonContent: "<img src=\"./img/map-logo.svg\" class=\"questions__map-logo\" alt=\"map image\"><p class=\"questions__map-text\">\u0433.\u0415\u043A\u0430\u0442\u0435\u0440\u0438\u043D\u0431\u0443\u0440\u0433, \u0443\u043B. \u0411\u043E\u0440\u0438\u0441\u0430 \u0413\u0430\u043B\u0443\u0448\u043A\u0438\u043D\u0430, 10</p>"
-  }, {
-    // Опции.
-    // Необходимо указать данный тип макета.
-    iconLayout: "default#image",
-    // Своё изображение иконки метки.
-    iconImageHref: "./img/location-icon.svg",
-    // Размеры метки.
-    iconImageSize: [34, 48],
-    // Смещение левого верхнего угла иконки относительно
-    // её "ножки" (точки привязки).
-    iconImageOffset: [-18, -55]
-  });
-  myMap.geoObjects.add(myPlacemark);
-  /* document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(() => {
-      // const mapBaloon = document.querySelector(".ymaps-2-1-79-image");
-      // mapBaloon.click();
-      var balloon = new ymaps.Balloon(myMap);
-      balloon.open(myMap.getCenter());
-      // console.log(mapBaloon);
-    }, 3000);
-  }) */
-  // var balloon = new ymaps.Balloon(myMap);
-  // balloon.open();
-});
 "use strict";
 
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }

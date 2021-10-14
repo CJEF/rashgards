@@ -426,6 +426,7 @@ a {
   visibility: hidden;
   transition: opacity 0.2s ease-in, visibility 0.2s ease-in;
   z-index: 999;
+  overflow-x: hidden;
 }
 .modal-wrapper.active {
   visibility: visible;
@@ -492,6 +493,34 @@ a {
   .input:hover ~ .input-span, .input:focus ~ .input-span, .input:valid ~ .input-span, .input-span:hover {
     transform: translateY(-141%);
   }
+}
+
+.modal-gallery .modal {
+  display: block;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.modal-gallery .modal__title {
+  margin-bottom: 30px;
+}
+
+.modal-slider--top.gallery-slider .gallery__item {
+  max-width: 500px !important;
+  max-height: 800px !important;
+}
+
+@media (max-width: 680px) {
+  .modal-gallery .modal {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+  }
+}
+.modal-slider--top .swiper-wrapper,
+.modal-slider--bottom .swiper-wrapper {
+  transition-timing-function: linear;
 }
 
 .header {

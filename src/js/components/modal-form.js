@@ -3,6 +3,7 @@ const orderBtn = document.querySelectorAll("button.article-info__btn[data-modal]
 const agreement = document.querySelectorAll("button.footer-agreement__btn[data-modal]");
 const sizeGridBtn = document.querySelectorAll("button.catalog__grid-btn[data-modal]");
 const fighterBtn = document.querySelectorAll("button.fighters-item__btn[data-modal]");
+const galleryModalBtn = document.querySelectorAll("button.intro-bottom__certificates[data-modal]");
 
 const closeBtn = document.querySelectorAll(".modal__close");
 const body = document.querySelector('body');
@@ -58,6 +59,10 @@ agreement.forEach(function (elem) {
   elem.addEventListener("click", openModal)
 });
 
+galleryModalBtn.forEach(function (elem) {
+  elem.addEventListener("click", openModal)
+});
+
 document.addEventListener("keydown", function (e) {
   if (e.keyCode === 27) {
     let modalWrap = document.querySelectorAll(".modal-wrapper");
@@ -66,3 +71,17 @@ document.addEventListener("keydown", function (e) {
     })
   }
 });
+
+let modalWrapper = document.querySelectorAll(".modal-wrapper")
+
+modalWrapper.forEach(function(wrap) {
+  wrap.addEventListener("click", function(e) {
+    if (e.target.closest(".modal")) {
+      return;
+    }
+    let modalWrap = document.querySelectorAll(".modal-wrapper");
+    modalWrap.forEach(function(modal) {
+      modal.classList.remove("active")
+    })
+  })
+})
